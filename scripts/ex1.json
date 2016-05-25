@@ -1,0 +1,379 @@
+// Présentation d’un algorithme présentant une problématique algorithmique. Il faut fournir un énoncé ainsi que la solution algorithmique.
+
+var ex1 = [
+  {
+    "NOM Prenom": "LUCAS Simon",
+    "Enonce": "Ecrivez un algorithme qui demande un nombre à l'utilisateur et qui affiche à l'écran ce même nombre divisé par 3.",
+    "Solution": "var nombre = prompt('Quel nombre voulez-vous diviser par 3 ?');<br/>var val = nombre / 3;<br/>console.log(val);"
+  },
+  {
+    "NOM Prenom": "CHABAUD Lucie",
+    "Enonce": "Faire un menu qui propose 3 choix à l'utilisateur: <br/>        a. exécute 'HelloWorld' <br/>        b. exéute 'How are you ?'<br/>        c. quitter<br/>Après avoir choisi, l'algorithme devra afficher 'HelloWord', 'How are you ?', 'bye' ou si ce n'est pas un des choix possible il devra afficher 'le choix n'est pas valable'. <br/>",
+    "Solution": "function Menu(){ <br/> do { <br/> document.write('a. execute HelloWorld &lt;br/&gt;'); <br/>document.write('b. execute HowAreYou &lt;br/&gt;'); <br/>document.write('c. quitter &lt;br/&gt;'); <br/>var x = prompt('Choisir une option a, b ou c'); <br/>if (x == 'a') document.write('HelloWorld &lt;br/&gt;'); <br/>else if (x == 'b') document.write('HowAreYou &lt;br/&gt;'); <br/>else if (x != 'c' || x != 'a' || x != 'b' ) document.write(x + ‘choix non valable &lt;br/&gt;’);<br/>}while (x != 'c');<br/>document.write('Bye!');<br/>}<br/>Menu();<br/>"
+  },
+  {
+    "NOM Prenom": "MIELLE Grégoire",
+    "Enonce": "Imaginez un algorithme qui permettrait à quelqu'un de calculer son IMC et de savoir si sa corpulence est normal, inférieure ou supérieure à la moyenne. On rappelle que l'IMC se calcule de la manière suivante : poids (kg) / (taille (m))². Obésité massive : IMC &gt; 30 Obésité : 25 &lt; IMC &lt; 30 Normal : 18.5 &lt; IMC &lt; 25 Maigre : IMC &lt; 18.5",
+    "Solution": "function imc(p, t) { <br/> var nb = p/(t*t); <br/> var imc = nb.toFixed(2) <br/> var txt = ''; <br/> if (imc &gt; 30) { <br/> txt = 'Vous êtes en obésité massive.'; <br/> } <br/> else if (25 &lt; imc && imc &lt;= 30) { <br/> txt = 'Vous êtes en obésité.'; <br/> } <br/> else if (18.5 &lt; imc && imc &lt;= 25) { <br/> txt = 'Vous êtes normal.'; <br/> } <br/> else if (imc &lt;= 18.5) { <br/> txt = 'Vous êtes maigre.'; <br/> } <br/> else { <br/> txt = 'Vous avez des problèmes.'; <br/> } <br/> document.write('&lt;p&gt;Votre IMC est égal à &lt;strong&gt;' + imc + '&lt;/strong&gt;.'); <br/> document.write('&lt;p&gt;' + txt + '&lt;/p&gt;'); <br/> } <br/> imc(prompt('Veuillez saisir votre poids en kg.'), prompt('Veuillez saisir votre taille en mètres.'));<br/>"
+  },
+  {
+    "NOM Prenom": "CHÂTEAU Robin",
+    "Enonce": "Ecrire un programme demandant à l'utilisateur de saisir chiffre entier positif, vérifier si il est bien compris entre 0 et 9 et afficher sa table de multiplication.",
+    "Solution": "var entier = prompt('Saisir le chiffre que vous voulez multiplier');<br/>if (entier &gt; 9 || entier &lt; 0){<br/>alert('Le chiffre n'est pas un entier positif!');<br/>var entier = prompt('Saisir le chiffre que vous voulez multiplier');<br/>}<br/>else {<br/>for (var i = 0; i &lt; 11; i++){<br/>résultat = entier * i;<br/>document.write(entier + ' x ' + i + ' = ' + résultat + '&lt;/br&gt;');<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "FROIDEFONT Margaux",
+    "Enonce": "Ecrire un programme qui, au click sur un bouton d'identifiant '#colorButton' dans la page HTML engendre la modification de la couleur d'un texte",
+    "Solution": "var bouton = document.querySelector('#colorButton');<br/> bouton.addEventListener('click',changerCouleur,false); <br/> function changerCouleur(){<br/>var texte = document.querySelector('#colorText');<br/> texte.style.color = '#FF9900';<br/>}"
+  },
+  {
+    "NOM Prenom": "MARTINEZ Valentin",
+    "Enonce": "Ecrire un algorithme fonctionnel pour demander à l’utilisateur deux nombres puis afficher leur somme.",
+    "Solution": "&lt;html&gt;<br/>&lt;body&gt;<br/>&lt;script&gt;<br/>var a = prompt('Entrez le premier nombre');<br/>var b = prompt('Entrer le deuxième nombre')<br/>;var somme = parseInt(a) + parseInt(b);<br/>document.write('La somme de '+a+' et '+b+' égal à '+ somme);<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;"
+  },
+  {
+    "NOM Prenom": "VILLAGEOIS Tran Minh",
+    "Enonce": "Ecrivez un algorithme qui demande une phrase à l'utilisateur et qui affiche le nombre de mot de cette phrase.",
+    "Solution": "var phrase = prompt('Donner moi une phrase?');<br/>var nb_mot = phrase.split(' ').length;<br/>document.write(nb_mot);"
+  },
+  {
+    "NOM Prenom": "EL AYADI Naïm",
+    "Enonce": "Concevoir un algorithme qui demande une date future à l'utilisateur et qui affiche à l'écran combien de jours il reste avant cette date.",
+    "Solution": "var date = new Date(); <br/> var d = date.getDate(); <br/> var m = date.getMonth(); <br/> m++; <br/> var y = date.getFullYear(); <br/> var compare = new Date(prompt('Entrer la date que vous voulez comparer à celle d\\'aujourd\\'hui (Exemple : 10 Février 2016 (SANS ACCENTS !))')); <br/> var intervalle = compare.getTime() - date.getTime(); <br/> intervalle = Math.floor(intervalle / (1000 * 60 * 60 * 24)); <br/> document.write('Il ne reste plus que ' + intervalle + ' jours avant la date que vous avez entré');"
+  },
+  {
+    "NOM Prenom": "ANDRIANOFF Paul",
+    "Enonce": "Ecrivez un algorithme qui affiche tous les nombres premiers dans un interval définit par l'utilisateur.",
+    "Solution": "function main(g, n){<br/>n = (n*1); <br/>g = (g*1);<br/>var i,j;<br/>var bool;j = 0;<br/>var text = 'les nombres premiers sont dans [' + g + ';' + n + '] : ';<br/>for(i=g; i&lt;=n;i++){<br/>bool = verification(i);<br/>if(bool == 1){<br/>text = text + i + ' ';<br/>j = j+1;<br/>}<br/>else{<br/>text = text + '_ ';<br/>}<br/>}<br/>text = text + '&lt;br&gt;&lt;br&gt; Il y a ' + j + ' nombres premiers dans cet interval.';<br/>document.getElementById('resultat2').innerHTML =(text);<br/>}<br/>function verification(x){<br/>var i,j;<br/>var n;<br/>var bool;<br/>bool = 0;<br/>j = 0;<br/>if(x &lt; 2){<br/>return bool;<br/>}<br/>else{<br/>for (i=0; i&lt;x ; i++){<br/>if(x%i == 0){<br/>j = j+1;<br/>}<br/>}<br/>if(j == 1){<br/>bool = 1;<br/>return bool;<br/>}<br/>else{<br/>return bool;<br/>}<br/>}<br/>}<br/>function testMain(){<br/>var g, n;<br/>do {<br/>g = prompt('entrer la 1er borne de l interval');<br/>n = prompt('entrer la 2eme borne de l interval telle la 2eme &gt; ' + g);<br/>if((n*1) &lt; (g*1)){<br/>alert( g + ' est plus grand que ' + n + ' recommencez');<br/>}<br/>} while ((n*1) &lt; (g*1))<br/>main(g, n);<br/>}"
+  },
+  {
+    "NOM Prenom": "STEPHANT Yann",
+    "Enonce": "Ecrire un programme permettant de demander le prénom de l'utilisateur et d'afficher '« Bonjour ‘prénom’».",
+    "Solution": "var prénom = prompt('Saisir votre prénom');<br/>document.write('Bonjour ' + prénom);"
+  },
+  {
+    "NOM Prenom": "YILDIRIM Serhat",
+    "Enonce": "Entrez votre prénom et utilisez les fonctions .length pour mesurer la longueur de cette chaîne et console.log pour l’afficher dans la console de votre navigateur.",
+    "Solution": "console.log('prenom'.length)"
+  },
+  {
+    "NOM Prenom": "DE LA FOUCHARDIERE Antoine",
+    "Enonce": "Enoncé : Modifiez la taille ainsi que la couleur d'un texte à l'aide de Javascript",
+    "Solution": "function changetaille(taille) {<br/>document.getElementById('texte').style.fontSize = taille + 'px';<br/>}<br/>function changecouleur(couleur) <br/>{<br/>  document.getElementById('texte').style.color = couleur;<br/>}"
+  },
+  {
+    "NOM Prenom": "FOGGETTI Clara",
+    "Enonce": "Ecrivez un algorithme qui demande un nombre à l’utilisateur et qui  indique si son nombre appartient ou non à l’intervalle [0;10].",
+    "Solution": "function intervalle(a,b) { <br/> if (a &gt; b) document.write('Erreur programme.'); <br/> else { <br/> var x = prompt('Saisir x'); <br/> if (a &lt;= x && x &lt;= b) document.write(x + ' is in [' + a + ', ' + b + ']&lt;br/&gt;'); <br/> else document.write(x + ' is not in [' + a + ', ' + b + ']&lt;br/&gt;'); <br/> } <br/> } <br/> var a = 1; <br/> var b = 10; <br/> intervalle (a, b);"
+  },
+  {
+    "NOM Prenom": "ZITA Kévy",
+    "Enonce": "// Ecrire un programme qui affiche 1000 fois Hello World",
+    "Solution": "var a = 1;<br/>while (a &lt; 1001){<br/>document.write('Hello World');<br/> a++;<br/>}"
+  },
+  {
+    "NOM Prenom": "DALLE Kenrig",
+    "Enonce": "Ecrivez un algorithme qui demande le rayon d’un cercle à l'utilisateur et qui retourne le diamètre de ce cercle<br/>",
+    "Solution": "function surfaceCercle() {<br/>var rayon=parseInt(prompt(' Entrez le rayon du cercle : '));<br/>return rayon*2;<br/>}"
+  },
+  {
+    "NOM Prenom": "BUSSON Kimberly",
+    "Enonce": "Cet algorithme calcule et affiche tous les nombres premiers compris entre 1 et N",
+    "Solution": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr-FR'&gt;<br/>&lt;head&gt;<br/> &lt;meta charset='utf-8'&gt;<br/> &lt;title&gt;Exercice 1 &lt;/title&gt;<br/>&lt;/head&gt;<br/> &lt;body&gt;<br/> &lt;script&gt;<br/> var N;<br/> var i; <br/>var j; <br/> var premier; <br/>    document.write('Cet algorithme calcule et affiche tous les nombres premiers compris entre 1 et N&lt;br/&gt;');<br/>    N = prompt('Entrez une valeur entière');<br/>    N = parseInt(N);<br/>    document.write('N = '+N+'&lt;br/&gt;');<br/>    for (i = 2; i &lt;= N; i = i + 1) {<br/>premier = true;<br/>   for (j = 2; j &lt; i; j = j + 1)<br/>{if (( i % j) == 0)<br/>  {<br/>  premier = false;<br/> break;<br/>} <br/>}<br/> if (premier)<br/> document.write('Le nombre '+i+' est premier&lt;br/&gt;');<br/>}<br/> &lt;/script&gt;<br/> &lt;/body&gt;<br/>&lt;/html&gt;<br/>"
+  },
+  {
+    "NOM Prenom": "MARUSIC Florian",
+    "Enonce": "Ecrire un programme qui affiche un menu a l'utilisateur avec 3 choix possibles, a, b ou c. Si l'utilisateur saisie a afficher Hello World, si il saisie b afficher How are you ? Si il saisie c il quitte le programme et si il saisie un autre caractère afficher réponse inccorect. Proposez à l'utilisateur après chaque réponses de continuer.",
+    "Solution": "function Menu() {<br/> do {<br/> document.body.innerHTML = ';<br/> document.write('a. Execute HelloWorld &lt;br/&gt; b. Execute HowAreYou &lt;br/&gt; c. Quit &lt;br/&gt;');<br/> var x = prompt(' Choisir une option a, b ou c.');<br/> if (x == 'a') <br/> document.write ('Hello World !');<br/> else if (x == 'b')<br/> document.write ('How are you ?');<br/> else if (x != 'c')<br/> document.write ('Réponse incorrect');<br/> prompt('continuer?');<br/> }<br/> while (x != 'c')<br/> document.write ('A bientôt')<br/>;<br/> }<br/>"
+  },
+  {
+    "NOM Prenom": "WILLAME Marie-Charlotte",
+    "Enonce": "Créer un algorithme calculant les deux solutions d'une équation du second degrés",
+    "Solution": "function equation2(){<br/>var a; //celui de aX²<br/>var b; //celui de bX<br/>var c;<br/>var delta; //le discriminant du polynome<br/>var x1, x2;//les racines du polynome<br/>a = prompt('Entrer a telle que Y = aX² + bX + c');<br/>b = prompt('Entrer a telle que Y = aX² + bX + c');<br/>c = prompt('Entrer a telle que Y = aX² + bX + c');<br/>delta = (b*b)-(4*c);<br/>if(delta &gt; 0 ) {<br/>x1 = (-b-Math.sqrt(delta))/(2*a);<br/>x2 = (-b+Math.sqrt(delta))/(2*a);<br/>document.write('Les racines du polynome sont: X1= ' + x1 + ' et X2= '+ x2 );}<br/>else<br/>if(delta == 0) {<br/>x1 = (b)/(2*a);<br/>document.write('Le polynome a une seule racine: X1= '+ x1);}<br/>else {<br/>document.write('Le polynome à 2 racines complexes: x1 = ' + (b*(-1)) + ' - i ( ' + Math.sqrt(delta*(-1)) + ')/' + 2*a + ' et x2 = ' + (b*(-1)) + ' + i (' + Math.sqrt(delta*(-1)) + ')/' + (2*a));<br/>}<br/>}<br/>equation2();"
+  },
+  {
+    "NOM Prenom": "DELAURIERE Solenne",
+    "Enonce": "Concevoir un algorithme qui demande à l’utilisateur son nom, son année de naissance et son sexe (0 : M ou 1 : F) puis qui affiche un message qui salue l’utilisateur, indique son âge, en utilisant la première personne si l’utilisateur a moins de 16 ans, la troisième sinon, enfin s’il est ‘homme’ (‘garçon’ si moins de 16 ans) ou ‘femme’ (‘fille’ si moins de 16 ans).",
+    "Solution": "function age_sexe() {<br/>var nom = prompt('Quel est votre nom ?');<br/>var annee = prompt('Quel est votre année de naissance ?');<br/>var sexe = prompt('Si vous êtes un homme entrez 0 et si vous êtes une femme entrez 1');<br/>var age = 2015 - annee;<br/>if (age &gt; 16) document.write('Bonjour ' + nom + ' vous avez ' + age + ' ans et vous êtes');<br/>else document.write('Bonjour ' + nom + ' tu as' + age + ' ans et tu es');<br/>if (sexe == 0) {<br/>if (age &gt; 16) document.write(' un homme');<br/>else document.write(' un garçon');<br/>} else {<br/>if (age &gt; 16) document.write(' une femme');<br/>else document.write(' une fille');<br/>}<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "HAZAN Kyle",
+    "Enonce": "Concevoir un algorithme qui prend en paramètre un entier x, demande à l’utilisateur de saisir un entier y puis indique par un message si y est supérieur ou inférieur à x.",
+    "Solution": "function sup_inf(x) { <br/> var y = prompt('Saisir y');<br/> if (x &gt; y) document.write('x est supérieur à y'); <br/>else if (x &lt; y) document.write('x est inférieur à y'); <br/>else document.write('les deux entiers sont égaux');"
+  },
+  {
+    "NOM Prenom": "TURPIN Antoine",
+    "Enonce": "Trouvez si un nombre renseigné par l'utilisateur est pair ou impair.",
+    "Solution": "var nombre = prompt('Entrez un nombre'); <br/> if (nombre % 2 == 0) { <br/> document.write('Ce nombre est pair'); <br/> } <br/> else { <br/> document.write('Ce nombre est impair'); <br/> }"
+  },
+  {
+    "NOM Prenom": "HEREDIA Alison",
+    "Enonce": "Ecrivez un algorithme du jeu pile ou face renvoyant 'gagné' quand le choix de l'utilisateur et de l'ordi coïncident sinon 'perdu'",
+    "Solution": "var choixUtilisateur = prompt('Choisissez pile ou face');<br/>var choixOrdi = Math.random();<br/>if(choixOrdi &lt;= 0.50){<br/>choixOrdi = 'pile';<br/>}<br/>else{<br/>choixOrdi = 'face';<br/>}<br/> var choix1 = choixOrdi;<br/>var choix2 = choixUtilisateur;<br/>function compare(choix1,choix2){<br/> if(choix1 !== choix2){<br/>document.write('perdu');<br/>}else{<br/> document.write('gagné');<br/> }<br/>}<br/>compare(choixOrdi,choixUtilisateur)"
+  },
+  {
+    "NOM Prenom": "FOURNIER Méric",
+    "Enonce": "var name=prompt('votre nom ?');<br/>document.write('votre prénom est composé de +name.length+' lettres');",
+    "Solution": "var name=prompt('votre nom ?');<br/>document.write('votre prénom est composé de +name.length+' lettres');"
+  },
+  {
+    "NOM Prenom": "DURET Gabriel",
+    "Enonce": "Concevoir un algorithme qui retourne vrai si un élément x donné est présent dans un tableau a donné.",
+    "Solution": "for(var i = 0; i &lt; n-1; i ++) {<br/>if a[i]=x return true;<br/>}<br/>return false"
+  },
+  {
+    "NOM Prenom": "LUANGKHOT Octave",
+    "Enonce": "window.alert('créez une boucle for dans la boucle for, chaque boucle doit tourner trois fois.');",
+    "Solution": "for ( i = 0 ; i &gt;3 ; i++) ;<br/>for ( i = 0 ; i &gt;3 ; i++) ;<br/>end<br/>"
+  },
+  {
+    "NOM Prenom": "PAWLAK Camille",
+    "Enonce": "Nous allons construire un petit programme qui simule le lancement d'une pièce de monnaie x ayant les mêmes probabilités de tomber sur 'pile' ou sur 'face'.",
+    "Solution": "var x = Math.random();<br/>if (x &lt; 0.5)<br/>document.write('Pile');<br/>else<br/>document.write('Face');"
+  },
+  {
+    "NOM Prenom": "VANSEVEREN Lucile",
+    "Enonce": "Ecrivez un algorithme qui demande un mot à l’utilisateur et qui affiche à l’écran le nombre de lettres de ce mot",
+    "Solution": "Variable Phrase en Caractère <br/> Variables Nb, i, j en Entier <br/> Debut <br/> Ecrire 'Entrez une phrase : ' <br/> Lire Phrase <br/> Nb ← 0 <br/> Pour i ← 1 à Len(Phrase) <br/> Si Mid(Phrase, i, 1) = 'a' ou Mid(Phrase, i, 1) = 'e' ou Mid(Phrase, i, 1) = 'i' ou Mid(Phrase, i, 1) = 'o' ou Mid(Phrase, i, 1) = 'u' ou Mid(Phrase, i, 1) = 'y' Alors <br/> Nb ← Nb + 1 <br/> FinSi <br/> i suivant <br/> Ecrire 'Cette phrase compte ', Nb, ' voyelles' <br/> Fin"
+  },
+  {
+    "NOM Prenom": "FRANCO Lucille",
+    "Enonce": "ecrivez un algorithme qui demande l'age a l'utilisateur et qui affiche un message 'age non valide si celui si a moins de 18 ans",
+    "Solution": "&lt;script language='javascript'&gt;<br/>var userage = prompt('Entrer votre age');<br/>if ( userage &lt;= 0 || userage &gt; 150)<br/>alert('Age non valide');<br/>else<br/>alert(userage+ 'est valide');<br/>&lt;/script&gt;"
+  },
+  {
+    "NOM Prenom": "BENOLIEL Alexis",
+    "Enonce": "Ecrivez un algorithme qui demande deux entiers à l’utilisateur et qui affiche à l’écran 4 operation (multiplication, division, addition, soustraction) pour ces deux entier",
+    "Solution": "var x, y;<br/>x = parseInt(prompt('veuillez saisire un entier x '))<br/>y = parseInt(prompt(' veuillez saisire un entier y ')); <br/>     <br/>document.write( x + '+' + y + '=' + ( x + y ) + '&lt;/br&gt;');<br/>document.write( x + '-' + y + '=' + ( x - y ) +'&lt;/br&gt;');<br/>document.write( x + 'x' + y + '=' + ( x * y ) + '&lt;/br&gt;' );<br/>document.write( x + '/' + y + '=' + ( x / y ) + '&lt;/br&gt;' );"
+  },
+  {
+    "NOM Prenom": "PHAM Bich-Tram Cynthia",
+    "Enonce": "Ecrire un algorithme permettant de calculer la valeur pi. Utiliser s.toPrecision() pour modifier la précision et en suiver la formule de Leibniz.",
+    "Solution": "function valeurPi(n){<br/>            <br/>var e = prompt('entrer un nombre selon la précision voulue');<br/>            <br/>var s = 0;<br/>            <br/>for (var i = 0; i&lt;n;){<br/>            <br/>formule = 4*((Math.pow(-1,i))/(2*i+1));<br/>            <br/>s = s + formule;<br/>           <br/>i++;<br/>           <br/> }<br/>           <br/>document.write(s.toPrecision(e));<br/>            <br/>}<br/>            <br/>"
+  },
+  {
+    "NOM Prenom": "CHENOT Carina",
+    "Enonce": "Ecrivez un algorithme qui demande un nombre à l'utilisateur et qui retourne vrai si ce  nombre est compris entre 1 et 10, faux sinon.",
+    "Solution": "function compris(){ <br/>var nombre = parseInt(prompt('Entrez un nombre')); <br/>if (nombre &gt;= 1 || nombre &lt;= 10) return true; <br/>else return false;<br/>}"
+  },
+  {
+    "NOM Prenom": "HADDAD Marie-Elise",
+    "Enonce": "Ecrivez un algorithme qui demande deux opérandes à l'utilisateur et le choix d'opération puis que celui calcule.",
+    "Solution": "function calculatrice(){<br/>            var signe; <br/>            var a = 0; <br/>            var b = 0; <br/>            var resultat; <br/>        <br/>            a = prompt('Entre le 1er opérande'); <br/>            signe = prompt('Choisi l'opération que tu veux utiliser: +, -, x, /');<br/>            b = prompt('Entre le 2eme opérande');<br/>            if(signe == 'x') document.write(a + 'x' + b + ' = ' + (a * b)); <br/>            if(signe == '+') document.write(a + '+' + b + ' = ' + (+a + +b)); <br/>            if(signe == '-') document.write(a + '-' + b + '=' + (a - b)); <br/>            if(signe == '/') { <br/>                if(b == 0) document.write('Division par 0'); <br/>                else document.write(a + '/' + b + ' = ' + (a / b)); <br/>            } <br/>        } <br/>            <br/>            calculatrice(); <br/>"
+  },
+  {
+    "NOM Prenom": "QUERCIA Joseph",
+    "Enonce": "Concevoir un algorithme qui permet de personnaliser un message d'acceuil en fonction de l'heure locale, ici en affichant 'Bonsoir' une fois 18 heures.",
+    "Solution": "var date = new Date;<br/>var heure = date.getHours();<br/>var h1 = document.querySelector('#laDate');<br/>if (heure &gt;= 18) {<br/>h1.innerHTML='Bonsoir';<br/>}<br/>else {<br/>h1.innerHTML='Bonjour';<br/>}"
+  },
+  {
+    "NOM Prenom": "THERY Alex",
+    "Enonce": "Ecrivez un algorithme qui demande de choisir entre trois films et qui retourne un commentaire sur le film écris au début",
+    "Solution": "var film = prompt('Ecrivez l'un des trois films suivant : Pulp Fiction, Seven, Blade Runner');<br/>switch(film) {<br/>  case 'Pulp Fiction':<br/>    window.alert('Super film !');<br/>    break;<br/>  case 'Seven':<br/>      window.alert('Très bon thriller');<br/>    break;<br/>  case 'Blade Runner':<br/>     window.alert('Le meilleur de Ridley Scott.');<br/>    break;<br/>  default:<br/>    window.alert('Je n'ai pas compris votre choix.');<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "KIENY Lorène",
+    "Enonce": "Concevoir un algorithme qui renvoi après avoir demandé le nom, l'age, puis le sexe. Ce dernier renvoi ensuite bonjour suivis du 'nom', de 'l'age' et tu es un adulte ou un enfant en fonction du sexe.",
+    "Solution": "var nom = prompt('Quel est votre nom ?'); <br/>var annee = prompt('Quel est votre annee de naissance ?'); <br/>var sex = prompt('Si vous etes un homme entrez 0 et si vous etes une femme rentrez 1'); <br/>var age = 2016 - annee; <br/>if ((age &lt; 16) && (sexe = 0)) document.write('Bonjour' + nom + 'tu as' + age + ' ans et tu es'); <br/>if (sexe ==0) {<br/>if (age &gt; 16) document.write(' un homme'); <br/>else document.write(' un garçon');<br/>}else {<br/>if (age &gt; 16) document.write( ' une femme');<br/>else document.write(' une fille');<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "LAURENT Adrien",
+    "Enonce": "Construire un tableau 2D n par n contenant la table de multiplication",
+    "Solution": "var t = new Array(n);<br/>for (var i = 0; i &lt; n; i++) t[i] = new Array(n);<br/>for (var i = 0; i &lt; n; i++){<br/>for (var j = 0; j &lt; n; j++){<br/>t[i][j] = (i + 1) * (j + 1);}}<br/>return t;"
+  },
+  {
+    "NOM Prenom": "DINH Quang Tuyen",
+    "Enonce": "concevoir un algorithme qui demande à utilisateur un nombre n, puis affiche les calcus de 0 à nombre nième de ce nombre",
+    "Solution": "var nombre = parseInt(window.prompt('Choisissez votre nombre ?'));<br/>function calculer(){<br/>    for (i=0; i &lt;= nombre; i++){<br/>        document.write(nombre + ' * ' + i + ' = ' + (nombre*i) + '&lt;/br&gt;');<br/>    }<br/>}<br/>calculer()<br/>"
+  },
+  {
+    "NOM Prenom": "BAUNACH Yoann",
+    "Enonce": "Ecrivez un algorithme qui demande si l'utilisateur possède du lait, Si oui, afficher 'Vous pouvez faire de crêpes', Si non, afficher 'Vous ne pouvez pas faire de crêpes'",
+    "Solution": "function exo1() {<br/>var lait = prompt('Avez-vous du lait ? (o/n)');<br/>if (lait == 'o') {<br/>document.write('Vous pouvez faire de crêpes');<br/>} else {<br/>document.write('Vous ne pouvez pas faire de crêpes');<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "BERNAUX Nicolas",
+    "Enonce": "Faire un tableau d’une ligne avec les tous les mois.",
+    "Solution": "var jours = new Array (' Janvier, ' Février', ' Mars',' Avril', ' Mai',  ' Juin', ' Juillet', ' Août', ' Septembre', ' Octobre', ' Novembre',' Décembre');"
+  },
+  {
+    "NOM Prenom": "PHAN Kelly",
+    "Enonce": "Ecrivez un algorithme qui demande à l’utilisateur un nombre et qui affiche sa table de multiplication (allant de 1 à 10).",
+    "Solution": "var n = 0; <br/> n = parseInt(prompt('Quelle table ? ')); <br/> for (i=1 ; i&lt;=10 ; i++){ <br/> document.write(i+' x '+n+' = '+n*i+'&lt;br&gt;'); <br/> };"
+  },
+  {
+    "NOM Prenom": "FERREIRA DUARTE Marina",
+    "Enonce": "Ecrivez un algorithme permettant à l'utilisateur de simuler le(s) lancés d'un dé non truqué. On admettra qu'il aura une interface lui permettant de cliquer sur 'Lancer le dé 3 fois' ou de choisir manuellement le nombre de lancés. Le résultat de la simulation s'affichera alors comme une suite (Ex. : 1, 5, 3, 1, 2, 2).",
+    "Solution": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr'&gt;<br/>&lt;head&gt;<br/>&lt;meta charset='UTF-8'&gt;<br/>&lt;title&gt;Exercice 1  : Algorithme à réaliser : Lancer de dé&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;script language='JavaScript'&gt;<br/>var n=0, suite='', max=100;<br/>function nblancer()<br/>{max=prompt('Combien de fois voulez vous lancer le dé ?',8)<br/>if (max&gt;100){max=100}  lancer(max)<br/>}<br/>function lancer(n)<br/>{ for (i=1 , suite='' ; i&lt;=n ; i++ )<br/>{<br/>de=Math.ceil(6*Math.random())<br/>suite=suite + de.toString() + ' . '<br/>}<br/>document.monForm.résultat.value=suite<br/>}<br/>&lt;/script&gt;<br/>&lt;form name='Lancer de dé'&gt;<br/>&lt;input type='button' value='Lancer le dé 3 fois' onClick='lancer(3)'&gt;<br/>&lt;input type='button' value='Choisir le nombre de lancés' onClick='nblancer()&gt;<br/>&lt;input type='text' name='résultat' size='100'&gt;<br/>&lt;/form&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;"
+  },
+  {
+    "NOM Prenom": "RENARD Thibaut",
+    "Enonce": "Ecrire un algorithme qui demande un montant à l'utilisateur et qui affiche à l'écran le nombre de pièces de 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02 et 0.01 euro nécessaires pour atteindre ce montant",
+    "Solution": "var montant = prompt('Entrer un montant');<br/>document.write('Le montant est de : ' + montant + '&lt;br /&gt;');<br/>var pièces = [2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]<br/>var nb_pièces = new Array(pièces.length);<br/>for (i = 0; i &lt; pièces.length; i++)  {<br/>nb_pièces[i] = Math.floor(montant / pièces[i]);<br/>montant = montant - (pièces[i] * nb_pièces[i]);<br/>montant = montant.toFixed(2);<br/>document.write('pièces de ' + pièces[i] + '€ : ' + nb_pièces[i] + '&lt;br /&gt;');<br/>}"
+  },
+  {
+    "NOM Prenom": "ESDOLUC Paul",
+    "Enonce": 0,
+    "Solution": "function monaie_a_rendre(){var somme_total = parseFloat(prompt('Somme total donnée')); (<br/>)var prix = parseFloat(prompt('Prix des produits achetés')); (<br/>)<br/>var total = somme_total - prix; (<br/>)var monaie = ''; (<br/>)while(total &gt;= 50){ //counte le nombre de billet de 50 à rendre (<br/>)total -= 50; (<br/>)monaie += '50eur + '; (<br/>)} (<br/>)while(total &gt;= 20){ //counte le nombre de billet de 20 à rendre (<br/>)total -= 20; (<br/>)monaie += '20eur + '; (<br/>)} (<br/>)while(total &gt;= 10){ //counte le nombre de billet de 10 à rendre (<br/>)total -= 10; (<br/>)monaie += '10eur + '; (<br/>)} (<br/>)while(total &gt;= 5){ //counte le nombre de billet de 5 à rendre (<br/>)    total -= 5; (<br/>)monaie += '5eur + '; (<br/>)} (<br/>)while(total &gt;= 2){ //counte le nombre de pièce de 2 à rendre (<br/>)total -= 2; (<br/>)monaie += '2eur + '; (<br/>)} (<br/>)<br/>while(total &gt;= 1){ //counte le nombre de pièce de 1 à rendre (<br/>)total -= 1; (<br/>)<br/>monaie += '1eur + '; (<br/>)} (<br/>)while(total &gt;= 0.5){ //counte le nombre de pièce de 0.5 à rendre (<br/>)total -= 0.5; (<br/>)monaie += '0.5eur + '; (<br/>)} (<br/>)while(total &gt;= 0.2){ //counte le nombre de pièce de 0.2 à rendre (<br/>)total -= 0.2; (<br/>)monaie += '0.2eur + '; (<br/>)} (<br/>)while(total &gt;= 0.1){ //counte le nombre de pièce de 0.1 à rendre (<br/>)total -= 0.1; (<br/>)monaie += '0.1eur + '; (<br/>)} (<br/>)while(total &gt;= 0.05){ //counte le nombre de pièce de 0.05 à rendre (<br/>)total -= 0.05; (<br/>)monaie += '0.05eur + '; (<br/>)} (<br/>)while(total &gt;= 0.02){ //counte le nombre de pièce de 0.02 à rendre (<br/>)total -= 0.02; (<br/>)monaie += '0.02eur + '; (<br/>)} (<br/>)while(total &gt;= 0.01){ //counte le nombre de pièce de 0.01 à rendre (<br/>)total -= 0.01; (<br/>)monaie += '0.01eur + '; (<br/>)} (<br/>)monaie += 'Merci de votre visite et à très bientôt'; (<br/>)document.write(monaie); (<br/>)} (<br/>)monaie_a_rendre();"
+  },
+  {
+    "NOM Prenom": "ROSEL Théo",
+    "Enonce": "Ecrire un algorithme affichant tous les nombres premiers compris entre 0 et 100.",
+    "Solution": "document.write('les nombres premiers compris entre 0 et 100 sont :&lt;br&gt;');<br/>for(var i=2;i&lt;=100;i++){<br/>var nb=false;<br/>for(j=2;j&lt;i/2;j++){<br/>if(i%j==0)<br/>nb=true;<br/>}<br/>if(trouve==false)<br/>document.write(i,',');<br/>}"
+  },
+  {
+    "NOM Prenom": "BAULAND Evie",
+    "Enonce": "Ecrivez un algorithme qui renvoie 'Hello World' 20 fois.",
+    "Solution": "for(var i = 0; i &lt; 20; i++) {<br/>document.write('Hello World');<br/>}"
+  },
+  {
+    "NOM Prenom": "ROUSSEL Kaan",
+    "Enonce": "Concevoir un code qui renvoie les chiffres de 1 à 10",
+    "Solution": "for(var i = 1; i &lt;= 10; i ++){<br/>console.log(i);<br/>}"
+  },
+  {
+    "NOM Prenom": "L'HOMME Jérémy",
+    "Enonce": "Concevoir un algorithme qui définit une fonction calcAireCercle et lui affecter en argument 'rayon'. Retourner au sein de la fonction la formule qui nous permet de calculer l'aire d'un cercle (rayon² * PI). Créer une variable rayon qui prendra pour valeur 2. Pour finir, afficher l'aire du cercle en utilisant la variable 'rayon' créée. On affichera la phrase suivante : 'L'aire du cercle est de (valeur de l'aire)'.",
+    "Solution": "function calCaireCercle(rayon) {<br/>return rayon * rayon * Math.PI;<br/>}<br/>var rayon = 2;<br/>document.write('L'aire du cercle est de ' + calCaireCercle(rayon));"
+  },
+  {
+    "NOM Prenom": "BALOSSINI Arthur",
+    "Enonce": "Ecrivez un algorithme qui demande 3 nombre à l'utilisateur, et qui affiche à l'écran 'Vrai' si les 3 nombres sont égaux et 'Faux' si ils ne sont pas tous égaux.",
+    "Solution": "var x=prompt('Saisir x:');<br/>var y=prompt('Saisir y:');<br/>var z=prompt('Saisir z:');<br/>if ((x == y) && (y == z))document.write('Vrai');<br/>  else document.write('Faux');"
+  },
+  {
+    "NOM Prenom": "MARTIN Bérangère",
+    "Enonce": "Ecrire un algorithme en javascript qui applique une fonction nommée 'freeze' au clic sur un bouton dont l'identifiant est 'stop'.",
+    "Solution": "document.querySelector('#stop').addEventListener('click',freeze, false);"
+  },
+  {
+    "NOM Prenom": "SIEESS Charlotte",
+    "Enonce": "Ecrire un algorithme qui demande à l’utilisateur de rentrer un nombre entier et ensuite affiche si celui-ci est pair ou impair.",
+    "Solution": "function pair () {<br/>var userInput = parseInt(window.prompt(‘Veuillez saisir un nombre’));<br/>if (userInput==0) {<br/>document.write(‘Veuillez saisir un autre nombre différent de zéro’);<br/>} else {<br/>if (userInput%2==0) {<br/>document.write(‘Le nombre est pair’);<br/>} <br/>else {<br/>document.write(‘Le nombre est impair’);<br/>}<br/>}<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "DAVID Bérénice",
+    "Enonce": "Ecrivez un algorithme qui demande à l’utilisateur un nombre entier et affiche si il est pair où impair.",
+    "Solution": "function parity () {<br/>var number = parseInt(prompt('saisir un entier'));<br/>if (number == 0) {<br/>number = parseInt(prompt('Saisir un nouvel entier different de 0'));<br/>} else {<br/>if (number % 2 == 0) {<br/>document.write(number + ' est pair');<br/>} else {<br/>document.write(number + ' est impair');<br/>}<br/>}<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "ROSSIGNOL Nicolas",
+    "Enonce": "Écrivez un algorithme qui stocke les mots 'un', 'deux', 'trois', 'quatre', 'cinq'. L'algorithme doit ensuite envoyer à l'utilisateur, aléatoirement, un chiffre correspondant à une écriture en lettre stockée et qui demande à l'utilisateur 'quel est l'orthographe de ce chiffre ?'. L'algorithme devra retourner 'vrai' ou 'faux' en fonction de ce que l'utilisateur va rentrer.",
+    "Solution": "var ecritures = ['un', 'deux', 'trois', 'quatre', 'cinq']; <br/> for(var i = 0; i &lt; ecritures.length; i++) { <br/> var rand = Math.floor( Math.random() * ecritures.length); <br/> document.write(rand+1 +'&lt;br/&gt;'); <br/> var entree = prompt('écrire en lettre'); <br/> if(entree==ecritures[rand]) alert('vrai'); <br/> else alert('faux'); <br/> }"
+  },
+  {
+    "NOM Prenom": "DESOBRY Johann",
+    "Enonce": "Écrire un programme qui demande à l'utilisateur d'afficher 'hello world' autant de fois qu'il le souhaite",
+    "Solution": "n = prompt('Combien de fois ? ');<br/>i = 1;<br/>while (i &lt;= n){document.write('Hello World&lt;/br&gt;');<br/>i = i + 1;}"
+  },
+  {
+    "NOM Prenom": "BAUMANN Anna",
+    "Enonce": "Ecrire un algorithme faisant apparaitre les nombres premiers compris entre 0 et 100.",
+    "Solution": "document.write('les nombres premiers compris entre 0 et 100 sont :&lt;br&gt;');<br/> for(var i=2;i&lt;=100;i++){<br/> var trouve=false;<br/>for(j=2;j&lt;i/2;j++){<br/>if(i%j==0)<br/>trouve=true;}<br/>if(trouve==false)<br/>document.write(i,',');}"
+  },
+  {
+    "NOM Prenom": "N'GUYEN Johanna",
+    "Enonce": "Écrivez un algorithme qui demande deux nombres entiers à l'utilisateur et affiche le résultat de la multiplication de ces deux entiers.",
+    "Solution": "function multiplication () {<br/>var firstOp = parseInt(promt('Saisir un premier nombre entier'));<br/>var secondOp = parseInt(promt('Saisir un deuxième nombre entier'));<br/>document.write(firstOp + ' x ' + secondOp + ' = ' + (firstOp*secondOp));<br/>}"
+  },
+  {
+    "NOM Prenom": "CALMEJANE Lola",
+    "Enonce": "Ecrire un script demandant de l’utilisateur d’entrer son âge et de contrôler la validité de l’âge<br/>entré (si l’âge est erroné afficher un message d’erreur et redemander de saisir l’âge).",
+    "Solution": "&lt;script language='javascript'&gt;<br/>var userage = prompt('Entrer votre age');<br/>if ( userage &lt;= 0 || userage &gt; 150)<br/>alert('Age non valide');<br/>else<br/>alert(userage+ 'est valide');<br/>&lt;/script&gt;"
+  },
+  {
+    "NOM Prenom": "SALOBIR David",
+    "Enonce": "Ecrivez un algorithme qui demande à l'utilisateur son nom et qui affiche 'Bienvenue, [nom] , comment vas-tu ?'",
+    "Solution": "Var nom = prompt(‘Quel est votre prénom ?’);<br/>document.write(‘Bienvenue,’ + nom + ‘, comment vas-tu ?’);"
+  },
+  {
+    "NOM Prenom": "PEMBA KINGALA Christine",
+    "Enonce": "Ecrivez un programme qui demande l’heure à utilisateur  (heures, minutes, secondes) et lui retourne l’heure qu’il sera  3h 33 minutes et 33 secondes plus tard.",
+    "Solution": "var h = parseInt (prompt(' Entrez les heures ?’));<br/>var m = parseInt (prompt(' Entrez les minutes ?'));<br/>var s = parseInt (prompt(' Entrez les secondes ?'));<br/>s=s+33;<br/>m=m+33;<br/>h=h+3;<br/>if (s&gt;60) {<br/>s=s-60 ;<br/>m++;<br/>}<br/>if (m&gt;60) {<br/>m=m-60;<br/>h++;<br/>}<br/>if (h&gt;24){<br/>h=h-24;<br/>}<br/>document.write(‘Dans 3H33 et 33sec il sera ' + h + 'h ' + m + 'm ' + s + 's ‘);"
+  },
+  {
+    "NOM Prenom": 0,
+    "Enonce": "Ecrivez un algorithme qui demande à l'utilisateur son âge et qui affiche 'Bienvenue, tu as [age] ans.'",
+    "Solution": "var age = prompt(‘Quel est votre âge ?’);<br/>document.write(‘Bienvenue, tu as ' + age + 'ans.');"
+  },
+  {
+    "NOM Prenom": "AMRHEIN Antoine",
+    "Enonce": "Ecrivez un algorithme qui demande un nombre à l'utilisateur, puis qui devine ce nombre à l'aide d'une boucle 'for'. L'algorithme devra afficher tous les étapes successives dans la console, puis afficher 'Votre nombre est ...' avec la bonne réponse.<br/>Afin de faciliter l'exercice, on peut demander à l'utilisateur de choisir son nombre dans une intervalle définie au préalable (entre 0 et 50 par exemple).",
+    "Solution": "var Test = prompt('Entrez un nombre en 0 et 50'); <br/>function CheckVal(){<br/>for(var i=0 ; Test&gt;i ; <br/>console.log('Votre nombre n\\'est pas '+i+' !');<br/>}<br/>document.write('Votre nombre est'+ i);<br/>}<br/>CheckVal();<br/>"
+  },
+  {
+    "NOM Prenom": "HÉNAULT Thomas",
+    "Enonce": "Ecrivez un algorithme qui demande à l'utilisateur son lieu de résidence et qui affiche 'Bienvenue, tu habites à [lieu].'",
+    "Solution": "var lieu = prompt(‘Quel est votre lieu de résidence ?’);<br/>document.write(‘Bienvenue, tu habites à ' + lieu + '.');"
+  },
+  {
+    "NOM Prenom": "LEFEBVRE Gaëtan",
+    "Enonce": "Ecrivez un algorithme qui demande à l'utilisateur son numéro de téléphone et qui affiche 'Bienvenue, ton numéro de téléphone est [numéro]'",
+    "Solution": "var num = prompt(‘Quel est votre numéro de téléphone ?’);<br/>document.write(‘Bienvenue, ton numéro de téléphone est ' + num + '.');"
+  },
+  {
+    "NOM Prenom": "LAFARGUE Anthony",
+    "Enonce": "Ecrivez un algorithme qui demande à l'utilisateur son école et qui affiche 'Bienvenue, tu es à [école]'",
+    "Solution": "var ecole = prompt(‘Quel est votre école ?’);<br/>document.write(‘Bienvenue, tu es à ' + ecole + '.');"
+  },
+  {
+    "NOM Prenom": "ABRAHAM Emile",
+    "Enonce": "Concevoir un programme qui demande sa moyenne à l’utilisateur et statue sur le passage ou non sur son passage en deuxième année (note supérieure ou égale à 10)",
+    "Solution": "var note = parseFloat(prompt('saisissez votre moyenne'));<br/>if(note&gt;=10){<br/>document.write('Bravo, vous passez en deuxième année')<br/>}<br/>else{<br/>document.write('Désolé, vous avez échoué')<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "JAMEN Eva",
+    "Enonce": "Ecrire un algorithme qui demande à l’utilisateur son nom et un commentaire. L’affichage de son commentaire sera réduit à 200 caractères et se fera sous la forme : « Avis de nom : son commentaire etc. »",
+    "Solution": "var nom = prompt('Quel est votre nom?');<br/>var article = prompt('Que pensez-vous de notre programme?');<br/>var résumé;<br/>var limite = 200;<br/>résumé = article.substring(0,limite);<br/>limite = résumé.lastIndexOf(' ');<br/>résumé = résumé.substring(0,limite);<br/>document.write ('Avis de ' + nom + ' : ' + résumé + ' etc.');"
+  },
+  {
+    "NOM Prenom": "ALONSO Guillaume",
+    "Enonce": "// Veuillez réaliser un algorithme qui demande n valeurs a l'utilisateur des valeurs, les entre dans un tableau et les redonne classées pas ordre croissant. Tentez d'optimiser l'algorithme<br/>",
+    "Solution": "function tableCroissant(){<br/>var askNumber = [];<br/>askNumber.length = prompt('Combien de valeurs dans le tableau');<br/>for (var i = 0; i &lt; askNumber.length; i++){<br/>askNumber[i] = prompt('Entrez un nombre');<br/> }<br/>askNumber.sort();<br/>document.write(askNumber.join(' &lt;br&gt; '));<br/>}"
+  },
+  {
+    "NOM Prenom": "HABACHE Rayane",
+    "Enonce": "Ecrivez un algorithme qui demande à l'utilisateur son âge, puis envoie une réponse en fonction de si l'utilisateur est majeur ou non.",
+    "Solution": "age = prompt('quel est votre âge ?');<br/>if (age &lt; 18 ) { <br/> console.log('Tu est jeune !') } <br/> else { <br/> console.log('Ah, un adulte, enfin!') }"
+  },
+  {
+    "NOM Prenom": "NAEEM Myriam",
+    "Enonce": "Créer un algorithme qui demande l'âge de l'utilisateur. Le message 'Amusez-vous bien !' devra s'afficher si celui-ci à 18 ans ou plus, autrement c'est le message 'Vous ne pouvez pas jouer.' qui s'affichera.",
+    "Solution": "var age = prompt('Quel est votre âge ?');<br/>if (age &lt;= 18) {<br/>document.write('Amusez-vous bien !');<br/>}<br/>else {<br/>document.write('Vous ne pouvez pas jouer.');<br/>}"
+  },
+  {
+    "NOM Prenom": "MAILLARD Gautier",
+    "Enonce": "Ecrivez un algorithme qui demande à l'utilisateur un chiffre et qui affiche à l'écran sa table de multiplication",
+    "Solution": "var i = 1;<br/>var y = parseInt(prompt ('Saisir un chiffre'));<br/>while ( 1 &lt; 10 ) {<br/>document.write ( i + ' x ' + y + ' = ' + (i * y) + '&lt;br/&gt;');<br/>i++;<br/>}"
+  },
+  {
+    "NOM Prenom": "MARI Léna",
+    "Enonce": "Écrivez un algorithme qui demande à l’utilisateur son nom, son année de naissance et son sexe (0 : M ou 1 : F) puis qui affiche un message qui salue l’utilisateur, indique son âge, en utilisant la première personne si l’utilisateur a moins de 16 ans, la troisième sinon, enfin s’il est ‘homme’ (‘garçon’ si moins de 16 ans) ou ‘femme’ (‘fille’ si moins de 16 ans).",
+    "Solution": "function age_sexe() {<br/>var nom = prompt('quel est votre nom ?');<br/>var annee = prompt('quel est votre annee de naissance?');<br/>var sexe = prompt('si vous etes une femme entrez 1 et si vous etes un homme entrez 0');<br/>var age = 2015 - annee;<br/>if (age &lt; 16) document.write ('bonjour ' + nom + ' tu as ' + age + ' ans et tu es ');<br/>else document.write ('Bonjour ' + nom + ' vous avez ' + age + ' ans et vous êtes ');<br/>if (sexe ==0) {<br/>if (age &gt; 16) document.write (' un homme');<br/>else document.write (' un garçon');<br/>}<br/>else {#if (age &gt; 16)<br/>document.write (' une femme');<br/>else document.write (' une fille');<br/>}<br/>}<br/>function test_age_sexe() {<br/>age_sexe();<br/>}<br/>test_age_sexe();<br/>"
+  },
+  {
+    "NOM Prenom": "GRANDIN Théo",
+    "Enonce": "Demander à l'utilisateur de saisir des nombres positifs ou nuls et les sommer à mesure qu'il les saisit. Quand l'utilisateur saisit un nombre négatif, l'algorithme se termine après avoir affiché la somme des nombres positifs précédents. Si la première saisie de l’utilisateur est un nombre négatif, le programme retourne 0. Vous nommerez votre variable s.",
+    "Solution": "function interaction_utilisateur(){<br/>var n = parseInt(prompt('Saisir un nombre positif ou nul'));<br/>var s = 0;<br/>while (n &gt;= 0){<br/>var s = (m+n);<br/>document.write(m+'&lt;br/&gt;');<br/>var n = parseInt(prompt('Resaisir un nombre positif ou nul'));<br/>}<br/>document.write(m);<br/>}"
+  },
+  {
+    "NOM Prenom": "TA Hélène",
+    "Enonce": "Ecrivez un algorithme qui lors du clic sur le bouton amorce un changement de la couleur de la police en #d7bb03 et ajoute une div avec en h1 'Salutations !'.",
+    "Solution": "var body = document.querySelector(‘body’);<br/>var button = document.querySelector(‘.btn’);<br/>button.onclick = function() {<br/>button.style.color = ‘#d7bb03’;<br/>var nouveauDiv = document.createElement(‘div’);<br/>body.appendChild(nouveauDiv);<br/>nouveauDiv.innerHTML = '&lt;h1&gt;Salutations !&lt;/h1&gt; »;<br/>return false;<br/>};"
+  },
+  {
+    "NOM Prenom": "FALQUE Noé",
+    "Enonce": "Ecrivez une fonction qui reçoit en paramètre n'importe quel tableau 2D javascript et qui écrit ce tableau en HTML.",
+    "Solution": "function print_array(a) {<br/>    document.write('&lt;table&gt;');<br/>    for (var i = 0; i &lt; a.length; i++) {<br/>        document.write('&lt;tr&gt;');<br/>        for (var j = 0; j &lt; a[i].length; j++) {<br/>            document.write('&lt;td&gt;');<br/>        document.write(a[i][j]);<br/>            document.write('&lt;/td&gt;');<br/>        }<br/>        document.write('&lt;/tr&gt;');<br/>    }<br/>    document.write('&lt;/table&gt;');<br/>}<br/>print_array([<br/>        [0,1,2,3,4,5,6,7,8,9],<br/>        [9,8,7,6,5,4,3,2,1,0],<br/>    [0,0,0,0,0,5,6,7,8,9],<br/>        [0,1,2,3,4,0,0,0,0,0],<br/>    ]);"
+  },
+  {
+    "NOM Prenom": "VIGNERON-SEBASTIANIS Romain",
+    "Enonce": "Écrivez un script qui affiche un formulaire avec un champ texte. Écrivez ensuite dans ce champ le message 'Vous avez réussi votre exercice'.",
+    "Solution": "document.writeln('&lt;form id='myForm'&gt;');<br/>document.writeln('&lt;div&gt;');<br/>document.writeln('&lt;label for='myField'&gt;Champ&nbsp;:&lt;/label&gt;');<br/>document.writeln('&lt;input type='text'id='myField'size='60'&gt;');<br/>document.writeln('&lt;/div&gt;');<br/>document.writeln('&lt;/form&gt;');<br/>document.getElementById('myField').value='Vous avez réussi votre exercice';"
+  },
+  {
+    "NOM Prenom": "HABIB Duke",
+    "Enonce": "Concevoir un algorithme qui affiche 42 fois « Merci Didier »",
+    "Solution": "42MerciDidier () <br/> var locale compteur, un entier <br/> Début <br/> Compteur &lt;— 0 <br/> Tant que (condition) <br/> Début <br/> Afficher ‘Merci Didier’ <br/> compteur &lt;—compteur +1 <br/> Fin <br/> Fin"
+  }
+];

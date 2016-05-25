@@ -1,0 +1,364 @@
+//Présentation d’un algorithme et demande à l’internaute le résultat produit par cet algorithme.
+
+var ex3 = [
+  {
+    "NOM Prenom": "LUCAS Simon",
+    "Algorithme a afficher": "var age = 25;<br/>if (age &gt; 18) {<br/>console.log('Vous êtes bien grand !');<br/>}<br/>else {<br/>console.log('Vous n'êtes qu'un enfant.');<br/>}<br/>",
+    "Reponse attendue": "Vous êtes bien grand !"
+  },
+  {
+    "NOM Prenom": "CHENOT Carina",
+    "Algorithme a afficher": "var str = 'Hello how are you doing today?';<br/>      var res = str.split(' ');<br/>      document.write(res);",
+    "Reponse attendue": "Hello,how,are,you,doing,today?"
+  },
+  {
+    "NOM Prenom": "CHABAUD Lucie",
+    "Algorithme a afficher": "var x = 2 <br/>var y = 5<br/>var temp = 0<br/>temp = x;<br/>x = y;<br/>y = temp; <br/>cosole.log(y);<br/>",
+    "Reponse attendue": "y=2"
+  },
+  {
+    "NOM Prenom": "MIELLE Grégoire",
+    "Algorithme a afficher": "function text(txt) { <br/> var newtxt = txt.substring(11,18); <br/> newtxt = newtxt.substr(0,5); <br/> document.write(newtxt); <br/> } <br/> text('Je suis un héticien.');<br/>",
+    "Reponse attendue": "hétic"
+  },
+  {
+    "NOM Prenom": "GRENET François",
+    "Algorithme a afficher": "&lt;! DOCTYPE HTML&gt;<br/>&lt;html lang='fr-FR'&gt;<br/>&lt;head&gt;<br/>    &lt;meta charset='UTF-8'&gt;<br/>    &lt;title&gt;&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;!-- je suis un commentaire --&gt;<br/>&lt;/body&gt;<br/>&lt;body&gt;<br/>Exercice 7 &lt;br/&gt;<br/>&lt;script  type='text/javascript'&gt;<br/>document.write( ' 10 premiers termes de la suite de Fibonacci  &lt;br/&gt;');<br/>console.log(2);<br/>var a = 1;<br/>var b = 1;<br/>document.write(a +' ' + b);<br/>var c = a+b ;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>a=b;<br/>b=c;<br/>c=a+b;<br/>document.write(' ' + c);<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;",
+    "Reponse attendue": "Exercice 7<br/>10 premiers termes de la suite de Fibonacci<br/>1 1 2 3 5 8 13 21 34 55 89 144"
+  },
+  {
+    "NOM Prenom": "FROIDEFONT Margaux",
+    "Algorithme a afficher": "var x = 3.2; <br/>var y = x.Math.round; <br/>document.write(y);",
+    "Reponse attendue": 3
+  },
+  {
+    "NOM Prenom": "CHÂTEAU Robin",
+    "Algorithme a afficher": "var x = 'Je comprend le javascript';<br/>var y = x.substring('c', ' ');<br/>document.write(y);",
+    "Reponse attendue": "omprend"
+  },
+  {
+    "NOM Prenom": "MARTINEZ Valentin",
+    "Algorithme a afficher": "&lt;html&gt;<br/>&lt;body&gt;<br/>&lt;script&gt;<br/>var a = prompt('Entrez le premier nombre');<br/>var b = prompt('Entrer le deuxième nombre');<br/>var somme = parseInt(a) + parseInt(b);<br/>document.write('La somme de '+a+' et '+b+' égal à '+ somme);<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;",
+    "Reponse attendue": "Cet algorithme demande à l'utilisateur 2 nombres et retourne la somme"
+  },
+  {
+    "NOM Prenom": "EL AYADI Naïm",
+    "Algorithme a afficher": "var table = [7, 2, 4, 3, 9, 0, 1, 5, 8, 6]; <br/> document.write(table[9]);",
+    "Reponse attendue": 6
+  },
+  {
+    "NOM Prenom": "VILLAGEOIS Tran Minh",
+    "Algorithme a afficher": "Que fait cet algorithme: <br/>var montant_en_euros = prompt ('donner un montant ?'); <br/>montant_en_franc = montant_en_euros * 6.55<br/>document.write(montant_en_franc);<br/>",
+    "Reponse attendue": 655
+  },
+  {
+    "NOM Prenom": "STEPHANT Yann",
+    "Algorithme a afficher": "var x = 'Première partie';<br/>var y = 'seconde partie';<br/>document.write(x.concat(y));",
+    "Reponse attendue": "Première partie seconde partie"
+  },
+  {
+    "NOM Prenom": "ANDRIANOFF Paul",
+    "Algorithme a afficher": "var a = 7;<br/>for(var i = 0; i &lt; a; i++){<br/>for(var j = 0; j &lt; a; j++){<br/>document.write((i+1) + ' x ' +(j+1) + ' = ' + (j+1)*(i+1) + '');<br/>}<br/>document.write('&lt;/br&gt;');<br/>}",
+    "Reponse attendue": "1 x 1 = 11 x 2 = 21 x 3 = 31 x 4 = 41 x 5 = 51 x 6 = 61 x 7 = 7<br/>2 x 1 = 22 x 2 = 42 x 3 = 62 x 4 = 82 x 5 = 102 x 6 = 122 x 7 = 14<br/>3 x 1 = 33 x 2 = 63 x 3 = 93 x 4 = 123 x 5 = 153 x 6 = 183 x 7 = 21<br/>4 x 1 = 44 x 2 = 84 x 3 = 124 x 4 = 164 x 5 = 204 x 6 = 244 x 7 = 28<br/>5 x 1 = 55 x 2 = 105 x 3 = 155 x 4 = 205 x 5 = 255 x 6 = 305 x 7 = 35<br/>6 x 1 = 66 x 2 = 126 x 3 = 186 x 4 = 246 x 5 = 306 x 6 = 366 x 7 = 42<br/>7 x 1 = 77 x 2 = 147 x 3 = 217 x 4 = 287 x 5 = 357 x 6 = 427 x 7 = 49"
+  },
+  {
+    "NOM Prenom": "YILDIRIM Serhat",
+    "Algorithme a afficher": "Entrez la solution final de cette algorithme :<br/>var x = 'Bonjour';<br/>if (x&gt;3) {<br/>x = x.substring(3,7);<br/> console.log(x);<br/>}<br/>else {<br/>x = x.substr(0,3);<br/>console.log(x);<br/>}<br/>",
+    "Reponse attendue": "Bon'"
+  },
+  {
+    "NOM Prenom": "DE LA FOUCHARDIERE Antoine",
+    "Algorithme a afficher": "function verifyReply() {<br/>var proposedValue = valueField.value;<br/>var pattern       = /^\\d+$/;<br/>if(pattern.test(proposedValue)) {<br/>numberTry++;<br/>proposedValue = parseInt(proposedValue);<br/>if(proposedValue &lt; valueToFind {<br/>document.getElementById('result').innerHTML = 'Le nombre à trouver est plus grand';<br/>valueField.value = '';<br/>valueField.focus();<br/>} else if(proposedValue &gt; valueToFind) {<br/>document.getElementById('result').innerHTML = 'Le nombre à trouver est plus petit';<br/>valueField.value = '';<br/>valueField.focus();<br/>}<br/> else {<br/>document.getElementById('result').innerHTML = 'Vous avez trouvé la solution en '+numberTry+' coups';}<br/>}<br/> else {<br/>document.getElementById('result').innerHTML = 'La valeur proposée doit être un nombre !';<br/>}<br/>return false;}<br/>var maxValue    = 1024;<br/>var valueToFind = Math.floor((Math.random()*maxValue)+1);<br/>var numberTry   = 0;<br/>var valueField  = document.getElementById('valueField');<br/>if(valueToFind &gt; maxValue) {<br/>valueToFind = maxValue;<br/>}<br/>document.getElementById('maxValue').innerHTML = maxValue;<br/>valueField.value = '';<br/>valueField.focus();",
+    "Reponse attendue": "Cette algorithme permet de faire deviner un nombre entre 1 et 1024 à l'utilisateur."
+  },
+  {
+    "NOM Prenom": "FOGGETTI Clara",
+    "Algorithme a afficher": "Écrivez un algorithme qui demande  à l’internaute si l'entier saisi est pair ou impair.",
+    "Reponse attendue": "function parite(x) { <br/> if (x % 2 == 0) document.write (x + ' est pair &lt;br/&gt;'); <br/> else document.write (x + ' est impair &lt;br/&gt;'); <br/> } <br/> parite (prompt('Saisir un entier'));"
+  },
+  {
+    "NOM Prenom": "ZITA Kévy",
+    "Algorithme a afficher": "var a = [1,2,3,4,5,6,7,8,9,10];<br/>var p = 0;<br/>for(var i = 0; i &lt; a.length;i++){<br/>if (a[i] % 2 == 0)<br/>p = p+1;<br/>}<br/>document.write (p);",
+    "Reponse attendue": 5
+  },
+  {
+    "NOM Prenom": "BUSSON Kimberly",
+    "Algorithme a afficher": "cet algorithme  calcule tous les carrées qui vont de 1 à n",
+    "Reponse attendue": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr-FR'&gt;<br/>&lt;head&gt;<br/> &lt;meta charset='utf-8'&gt;<br/> &lt;title&gt;Exercice 3 &lt;/title&gt;<br/>&lt;/head&gt;<br/> &lt;body&gt;<br/>  &lt;script&gt;<br/>    var N;<br/>    var i;<br/>  N = prompt('Entrez une valeur entière');<br/>    N = Number(N);<br/>   for (i = 1; i &lt;= N; i = i + 1){<br/>document.write(i*i+'&lt;br/&gt;');<br/>} <br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>"
+  },
+  {
+    "NOM Prenom": "DALLE Kenrig",
+    "Algorithme a afficher": "var x = 22 ;<br/>var y = 25 ;<br/>var z = -10;<br/>console.log(x+y+z);",
+    "Reponse attendue": "x+y+z=37"
+  },
+  {
+    "NOM Prenom": "MARUSIC Florian",
+    "Algorithme a afficher": "Trouver le résultat de ce programme",
+    "Reponse attendue": "var a = [1,2,3,4,5,6,7,8,9,10];<br/> var p = 0;<br/> for(var i = 0; i &lt; a.length;i++){<br/> if (a[i] % 2 == 0) <br/> p = p+1;<br/> } <br/>document.write (p);"
+  },
+  {
+    "NOM Prenom": "WILLAME Marie-Charlotte",
+    "Algorithme a afficher": "function conjonction(){<br/>var x, y, z; /<br/>x = 2<br/>y = 4<br/>z =5<br/>if((x == y)&&( y == z)) return true;<br/>else return false;<br/>}<br/>function test(){<br/>var resultat = conjonction();<br/>document.write(resultat);<br/>}<br/>test();",
+    "Reponse attendue": "Return false"
+  },
+  {
+    "NOM Prenom": "DELAURIERE Solenne",
+    "Algorithme a afficher": "function interval(a,b){<br/>var x=8;<br/>if (a &lt;= x && (x &lt;= b)) document.write(x + 'compris dans [' + a + ', ' + b + ']');<br/>else document.write(x + ' non compris dans [' + a + ', ' + b + ']');<br/>}<br/>interval(9,22);",
+    "Reponse attendue": "8 non compris dans [9, 22]"
+  },
+  {
+    "NOM Prenom": "TURPIN Antoine",
+    "Algorithme a afficher": "var phrase = prompt('Entrez une phrase'); <br/> var nombreMots = 1; <br/> for (i = 0; i &lt; phrase.length; i++) { <br/> if (phrase[i] == ' ') { <br/> nombreMots = nombreMots + 1; <br/> } <br/> }",
+    "Reponse attendue": "Le nombre de mots dans la phrase"
+  },
+  {
+    "NOM Prenom": "NGO TRUNG Matthias",
+    "Algorithme a afficher": "var a=0;<br/>var b=1;<br/>switch(a==b){<br/>case true:<br/>document.write(‘a et b sont égaux.’);<br/>break;<br/>case false:<br/>document.write(‘a et b ne sont pas égaux.’);<br/>break;<br/>}",
+    "Reponse attendue": "a et b ne sont pas égaux."
+  },
+  {
+    "NOM Prenom": "BRILLION Kévin",
+    "Algorithme a afficher": "var x=2;<br/>var y=3;<br/>switch(x&lt;y){<br/>case true:<br/>document.write(‘x est inférieur à y.’);<br/>break;<br/>case false:<br/>document.write(‘x n'est pas inférieur à y.’);<br/>break;<br/>}",
+    "Reponse attendue": "x est inférieur à y"
+  },
+  {
+    "NOM Prenom": "FOURNIER Méric",
+    "Algorithme a afficher": "var name=prompt('Quel est votre nom ?');<br/>var sexe=parseInt(prompt('Quel est votre âge'));<br/>if (age&gt;18) {<br/>document.write('Bonjour '+name+'vous avez '+age+'ans. Vous êtes un adulte.');<br/>}<br/>else {<br/>document.write('Bonjour '+name+'vous avez '+age+'ans. Vous êtes un enfant.');<br/>}<br/>",
+    "Reponse attendue": "L'algorithme demande à l'utilisateur son prénom et son âge. Si l'utilisateur a plus de 18 ans l'algorithme lui dira qu'il est un adulte sinon il lui dira qu'il est un enfant."
+  },
+  {
+    "NOM Prenom": "DURET Gabriel",
+    "Algorithme a afficher": "var tab=[1,2,5,3,6,11,14];<br/>var somme =0;<br/>for(var i=0; i&lt; tab.length; i++){<br/>somme+=tab[i];<br/>document.write(tab[i]);<br/>if(i!=tab.length-1){<br/>document.write('+');<br/>}<br/>}<br/>document.write ('=' + somme);",
+    "Reponse attendue": 42
+  },
+  {
+    "NOM Prenom": "LUANGKHOT Octave",
+    "Algorithme a afficher": "NewArray(0,0,0,0) ;<br/>Var answer = 0 ;<br/>For (i = 0 ; i &lt; array .length ; i++) ;<br/>answer++ ;<br/>document.write answer ;<br/>",
+    "Reponse attendue": 4
+  },
+  {
+    "NOM Prenom": "HAZAN Kyle",
+    "Algorithme a afficher": "Concevoir un algorithme qui prend un entier en paramètre u nchiffre comprend entre 1 et 100 et demande à l'utilisateur de deviner cet entier, si celui ci saisi un entier supérieur afficher 'c'est plus, veuillez saisir un autre nombre' et inversement.",
+    "Reponse attendue": "function nombre_mystère(x) {<br/>  var y = prompt('Saisir un nombre :'); <br/>while (y != x) { <br/>document.write('Perdu :('); <br/>if (y &lt; x) document.write('c\\'est plus &lt;br/&gt;');<br/> else document.write('c\\'est moins &lt;br/&gt;'); <br/>y = prompt('Saisir un autre nombre :');<br/> }<br/>document.write('Gagné :)&lt;br/&gt;');<br/>}"
+  },
+  {
+    "NOM Prenom": "PAWLAK Camille",
+    "Algorithme a afficher": "var a = 'Cet exercice est simple.';<br/>var b = a.split(' ');<br/>document.write(b.length);",
+    "Reponse attendue": 5
+  },
+  {
+    "NOM Prenom": "VANSEVEREN Lucile",
+    "Algorithme a afficher": "Variables N, i en Entier <br/> Debut <br/> Ecrire 'Entrez un nombre : ' <br/> Lire N <br/> Ecrire 'Les 10 nombres suivants sont : '  <br/> Pour i ← N + 1 à N + 10 <br/> Ecrire i <br/> i Suivant <br/> Fin",
+    "Reponse attendue": "Un nombre quelconque, par ex : 7"
+  },
+  {
+    "NOM Prenom": "BENOLIEL Alexis",
+    "Algorithme a afficher": "var x, y, z;<br/>x = parseInt(prompt('veuillez saisire un entier x '));<br/>y = parseInt(prompt(' veuillez saisire un entier y '));<br/>z = x * y;<br/>document.write( x + '+' + y + '+' +  x + 'x' + y + '=' + ( x + y + z ) + '&lt;/br&gt;');",
+    "Reponse attendue": "x + y + z"
+  },
+  {
+    "NOM Prenom": "PHAM Bich-Tram Cynthia",
+    "Algorithme a afficher": "function  fonction(){<br/>        <br/>var a,b;<br/>        <br/>var x;<br/>        <br/>var i;<br/>        <br/>var n;<br/>        <br/>n = 5;<br/>        <br/>i = a = 0;<br/>        <br/>b = 1;<br/>        <br/>document.write(‘Les ‘ + n + ‘ premiers termes sont: ‘);<br/>        <br/>while(i &lt; n){<br/>            <br/>x = a + b;<br/>            <br/>a = b;<br/>            <br/>b = x;<br/>            <br/>i++;<br/>            <br/>document.write(‘ ‘ + x);<br/>        <br/>}<br/>    <br/>}<br/>    <br/>",
+    "Reponse attendue": "1,2,3,5,8 <br/>"
+  },
+  {
+    "NOM Prenom": "FRANCO Lucille",
+    "Algorithme a afficher": "&lt;script&gt;<br/>var x;<br/>x=7;<br/>if((x%=2) == 0<br/>{'document.write('1');}<br/>else{<br/>document.write('2');}<br/>&lt;/script&gt;",
+    "Reponse attendue": 2
+  },
+  {
+    "NOM Prenom": "BERNAUX Nicolas",
+    "Algorithme a afficher": "Quel sera le resultat de cet algorithme ?<br/>    var n = parseInt(prompt('saisir taille'));<br/>for(var i = 0; i &lt; n; i++){<br/>for(var j = 0; j &lt; n; j++){<br/>if(i%2 == 0){<br/>document.write('@');<br/>}<br/>else<br/>document.write('&nbsp');<br/>document.write('&lt;br/&gt;');<br/>}",
+    "Reponse attendue": "Cet algorithme affichera un damier qui aura une ligne noire sur 2"
+  },
+  {
+    "NOM Prenom": "HADDAD Marie-Elise",
+    "Algorithme a afficher": "function conjonction(){ <br/>            var x = 5 <br/>            var y = 5 <br/>            var z = 5 <br/>            if((x == y)&&( y == z)) return true; <br/>            else return false; <br/>        } <br/>        function test(){ <br/>            var resultat = conjonction(); <br/>            document.write(resultat); <br/>        } <br/>        test(); <br/>",
+    "Reponse attendue": "TRUE"
+  },
+  {
+    "NOM Prenom": "THERY Alex",
+    "Algorithme a afficher": "var premier = (5 + 4 % 3);<br/>var deux = (3 - 2);<br/>window.alert(deux + premier);<br/>",
+    "Reponse attendue": 7
+  },
+  {
+    "NOM Prenom": "QUERCIA Joseph",
+    "Algorithme a afficher": "var imageDiv = document.querySelector('#image');<br/>function function1() {<br/>imageDiv.style.backgroundImage='url('image2.jpg')';<br/>}<br/>function1();",
+    "Reponse attendue": "L'algorithme va changer la source de l'image"
+  },
+  {
+    "NOM Prenom": "KIENY Lorène",
+    "Algorithme a afficher": "var a = prompt(valeur de a) ;<br/>var b = 10;<br/>var z = a + b;<br/>document.write(z);",
+    "Reponse attendue": "L'algorithme ajoute 10 au nombre rentré et qui renvoie la valeur."
+  },
+  {
+    "NOM Prenom": "FERREIRA DUARTE Marina",
+    "Algorithme a afficher": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr'&gt;<br/> &lt;head&gt;<br/>&lt;meta charset='UTF-8'&gt;<br/>&lt;title&gt;Exercice 10 : Expliquez en quoi consiste cet algorithme&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;script&gt;<br/>var a;<br/>var b;<br/>var c;<br/>var x;<br/>var y;<br/>var Delta;<br/>var x1;<br/>var x2;<br/>var racineDouble;<br/>a=prompt('a=?');<br/>b=prompt('b=?');<br/>c=prompt('c=?');<br/>delta=(b*b) - (4*a*c);<br/>document.write('Delta = ' + delta +'&lt;br/&gt;');<br/>if(delta&gt;0) {<br/>x1=((0-b-Math.sqrt(delta))/2*a);<br/>x2=((0-b+Math.sqrt(delta))/2*a);<br/>document.write('x1=' + x1 +'&lt;br/&gt;');<br/>document.write('x2=' + x2 +'&lt;br/&gt;');<br/>}<br/>if(delta==0) {<br/>racineDouble=((0-b)/2*a);<br/>document.write('La racine double est :' + racineDouble + '&lt;br/&gt;');<br/>}<br/>if(delta&lt;0) {<br/>x=(0-(b/(2*a)));<br/>y=((Math.sqrt(Math.abs(delta)))/(2*a));<br/>document.write('Les racines complexes sont : x1='+x+'-i'+y+' et x2='+x+'+i'+y);<br/>}<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;",
+    "Reponse attendue": "Cet algorithme résout les équations du second degré."
+  },
+  {
+    "NOM Prenom": "ESDOLUC Paul",
+    "Algorithme a afficher": "function somme_des_entiers() {(<br/>)var nb = 5; (<br/>)var somme = 0;(<br/>)for(var i = 0; i &lt;= nb; i++) somme += i; //additionne les entiers jusqu'a l'entier saisie par l'utilisateur(<br/>)document.write(somme);(<br/>)}(<br/>)somme_des_entiers();",
+    "Reponse attendue": 15
+  },
+  {
+    "NOM Prenom": "DINH Quang Tuyen",
+    "Algorithme a afficher": "Concevoir un algorithme qui demande à utilisateur l'hauteur, le largeur et la longueur d'un rectangle et puis affiche le pourtour, la surface et le volume du rectangle",
+    "Reponse attendue": "var a = parseInt(window.prompt('Saisissez la longueur du rectangle ?'));<br/>var b = parseInt(window.prompt('Saisissez le largeur du rectangle ?'));<br/>var c = parseInt(window.prompt('Saisissez l'hauteur du rectangle ?'));<br/>var pourtour = 2 * (a + b);<br/>var surface = a * b;<br/>var volume = a * b * c;<br/>document.write('Le pourtour du rectangle est ' + pourtour + '&lt;/br&gt;');<br/>document.write('La surface du rectangle est ' + surface + '&lt;/br&gt;');<br/>document.write('Le volume du rectangle est ' + volume + '&lt;/br&gt;');<br/>"
+  },
+  {
+    "NOM Prenom": "LAURENT Adrien",
+    "Algorithme a afficher": "var a = parseInt(prompt('saisissez un multiple de 2');<br/>if (a%2!=0){<br/>document.write('Vrai');<br/>}<br/>Else {<br/>document.write('Faux');<br/>}<br/>",
+    "Reponse attendue": "L'algorithme demande à l'utilisateur de saisir un nombre multiple de 2, et lui dit si sa réponse est vraie ou fausse."
+  },
+  {
+    "NOM Prenom": "BAUNACH Yoann",
+    "Algorithme a afficher": "function exo3(a, b, c) {<br/>var a = 10;<br/>var b = 15;<br/>var c = 56;<br/>if (a &gt; b && a &gt; c) {<br/>document.write('la plus grande valeur est a');<br/>} else if (b &gt; a && b &gt; c) {<br/>document.write('la plus grande valeur est b');<br/>} else<br/>document.write('la plus grande valeur est c');<br/>}",
+    "Reponse attendue": "Cet algorithme renvoie la plus grande valeur entre a b et c soit ici 56"
+  },
+  {
+    "NOM Prenom": "PHAN Kelly",
+    "Algorithme a afficher": "var x = 6 ; <br/> var y = 2 ; <br/> console.log(x / y);",
+    "Reponse attendue": 3
+  },
+  {
+    "NOM Prenom": "MARTIN Bérangère",
+    "Algorithme a afficher": "var tab=['1', '2', '3', '4', '5', '6', '7', '8', '9'];<br/>for(i=0; i&lt;tab.length; i++){<br/>document.write(tab[i]+'&lt;/br&gt;');<br/>}",
+    "Reponse attendue": "1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9"
+  },
+  {
+    "NOM Prenom": "BALOSSINI Arthur",
+    "Algorithme a afficher": "var x = 2;<br/>var y = 3;<br/>var z = 2;<br/>if ((x == y || z) ^ (y == z)) document.write('Vrai');<br/>else document.write('Faux');",
+    "Reponse attendue": "Vrai"
+  },
+  {
+    "NOM Prenom": "ROSEL Théo",
+    "Algorithme a afficher": "var txt='hakuna matata';<br/>var txt2=txt. substring(7);<br/>document.write(txt2. substr(2,4));",
+    "Reponse attendue": "tata"
+  },
+  {
+    "NOM Prenom": "L'HOMME Jérémy",
+    "Algorithme a afficher": "var perimetreBoite = function (longueur, largeur) {<br/>var formule = longueur + longueur + largeur + largeur;<br/>return formule<br/>}<br/>console.log(perimetreBoite (5,6));",
+    "Reponse attendue": 22
+  },
+  {
+    "NOM Prenom": "RENARD Thibaut",
+    "Algorithme a afficher": "var image = document.querySelector('#image');<br/>image.addEventListener('click', function(){<br/>image.style.width = '300 px';<br/>},<br/>false<br/>);",
+    "Reponse attendue": "Au clic de l'utilisateur sur la division ayant le sélecteur id 'image', redimensionne la division à une largeur 300 pixels"
+  },
+  {
+    "NOM Prenom": "SIEESS Charlotte",
+    "Algorithme a afficher": "function compterMots() {<br/>var phrase = window.prompt('Veuillez saisir votre phrase'); <br/>var word = userInput.split(' '); <br/>document.write('Votre phrase contient ' + word.length + ' word.'); <br/>}",
+    "Reponse attendue": "Cet algorithme demande une phrase à l’utilisateur et affiche à l’écran le nombre de mots de cette phrase."
+  },
+  {
+    "NOM Prenom": "ROUSSEL Kaan",
+    "Algorithme a afficher": "var x= 10;<br/>var y = 18;<br/>console.log(y*2 + x);",
+    "Reponse attendue": 46
+  },
+  {
+    "NOM Prenom": "DAVID Bérénice",
+    "Algorithme a afficher": "function numberWords() {<br/>var phrase = window.prompt('Saisir une phrase');<br/>var words = userInput.split(' '); <br/>document.write('Votre phrase contient ' + mots.length + ' mots.'); <br/>}",
+    "Reponse attendue": "Cet algorithme demande une phrase à l'utilisateur et lui renvoie le nombres de mots qu'elle contient."
+  },
+  {
+    "NOM Prenom": "ROSSIGNOL Nicolas",
+    "Algorithme a afficher": "var a = 1; <br/> var b = 2; <br/> var c = 5; <br/> for (var counter = 0; counter &lt; 5; counter++) <br/> { <br/> if (a &lt;= b) <br/> { <br/> a = a + b; <br/> } <br/> else <br/> { <br/> a = a + c; <br/> } <br/> }",
+    "Reponse attendue": "a = 23"
+  },
+  {
+    "NOM Prenom": "DESOBRY Johann",
+    "Algorithme a afficher": "var nb = Math.floor(Math.random() * 100 + 1);<br/>console.log(nb);<br/>n = 0;<br/>n = prompt('Choisissez un nombre entre 1 et 100 compris : ');<br/> if (n == nb){alert('Bien joué, le bon nombre était ' + nb);}<br/>while (n != nb) {document.write(n + '&lt;/br&gt;');<br/>if (n &lt; nb) {n = prompt('Plus !'); }<br/>if (n &gt; nb) {n = prompt('Moins !');}<br/>if (n == nb){alert('Bien joué, le bon nombre était ' + nb); }}",
+    "Reponse attendue": "Le programme demande à l'utilisateur de trouver un nombre aléatoire entre 1 et 100, et lui repose la question jusqu'à ce qu'il trouve le bon nombre. Tout en lui donnant des indications de s'il est en dessous ou au dessus du nombre recherché."
+  },
+  {
+    "NOM Prenom": "N'GUYEN Johanna",
+    "Algorithme a afficher": "function compteurVoyelles() {<br/>var userInput = window.prompt('Veuillez saisir votre phrase'); <br/>var phrase = userInput.toLowerCase(); <br/>var z = 0; <br/>for (var i = 0; i &lt; phrase.length; i++) { <br/>if (phrase.charAt(i) == 'a' || phrase.charAt(i) == 'e' || phrase.charAt(i) == 'i' || phrase.charAt(i) == 'o' || phrase.charAt(i) == 'u' || phrase.charAt(i) == 'y') { <br/>z = z + 1; // si c'est les cas on ajoute 1 au nombre de voyelle<br/>}<br/>}<br/>document.write('Votre phrase contient ' + z + ' voyelles'); <br/>}",
+    "Reponse attendue": "Cet algorithme demande une phrase à l’utilisateur et affiche à l’écran le nombre de voyelles contenues dans cette phrase."
+  },
+  {
+    "NOM Prenom": "CALMEJANE Lola",
+    "Algorithme a afficher": "var tri_insert = function(t , f){<br/>for(var i=1 ; i &lt; t.length ; i++){<br/>var temp= t[i] ;<br/>var j = i-1 ;<br/>while( f(temp, t[j]) && j&gt;=0){<br/>t[j+1]= t[j]<br/>j-- ;<br/>};<br/>t[j+1]=temp ;<br/>}<br/>return t;<br/>}<br/>tri_insert([5,3,6,2,1] , function(a, b){ return   a &lt; b;})",
+    "Reponse attendue": "1,2,3,5,6"
+  },
+  {
+    "NOM Prenom": "SALOBIR David",
+    "Algorithme a afficher": "var x = 4;<br/>var y = 3;<br/>document.write(x * y);",
+    "Reponse attendue": 12
+  },
+  {
+    "NOM Prenom": "FISES Lisa",
+    "Algorithme a afficher": "var x = 4;<br/>var y = 3;<br/>document.write(x - y);",
+    "Reponse attendue": 1
+  },
+  {
+    "NOM Prenom": "HÉNAULT Thomas",
+    "Algorithme a afficher": "var x = 12;<br/>var y = 3;<br/>document.write(x / y);",
+    "Reponse attendue": 4
+  },
+  {
+    "NOM Prenom": "LEFEBVRE Gaëtan",
+    "Algorithme a afficher": "var x = 25;<br/>var y = 6;<br/>document.write(x + y);",
+    "Reponse attendue": 31
+  },
+  {
+    "NOM Prenom": "AMRHEIN Antoine",
+    "Algorithme a afficher": "function <br/>var tab = [1,2,3,4,5];<br/>console.log(tab[3]);<br/> }<br/>CeciTest();",
+    "Reponse attendue": 4
+  },
+  {
+    "NOM Prenom": "ABRAHAM Emile",
+    "Algorithme a afficher": "var nombre=5;<br/>var somme=0;<br/>for(i=nombre-1;i&gt;0;i—){<br/>somme=somme+(nombre-i);<br/>};<br/>document.write(‘somme= ‘+somme);<br/>",
+    "Reponse attendue": 13
+  },
+  {
+    "NOM Prenom": "LAFARGUE Anthony",
+    "Algorithme a afficher": "var x = 5;<br/>var y = 3;<br/>document.write(x - y * x);",
+    "Reponse attendue": 10
+  },
+  {
+    "NOM Prenom": "ALONSO Guillaume",
+    "Algorithme a afficher": "Algorithme changeant le background d'une page html",
+    "Reponse attendue": "var body = document.querySelector('body');<br/>click = document.querySelector('body');<br/>click.onclick = function changeBg(){<br/>if<br/>(body.style.backgroundColor == 'red'){<br/>body.style.backgroundColor = 'white';<br/>}<br/>else {<br/>body.style.backgroundColor = 'red';<br/>}<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "HABACHE Rayane",
+    "Algorithme a afficher": "<br/>var choixUtilisateur = prompt('Choisissez-vous pierre, feuille, ou ciseaux ?');<br/>var choixOrdi = Math.random();<br/>if (choixOrdi &lt; 0.34) {<br/>    choixOrdi = 'pierre';<br/>} else if(choixOrdi &lt;= 0.67) {<br/>    choixOrdi = 'feuille';<br/>} else {<br/>    choixOrdi = 'ciseaux';<br/>} console.log('Ordinateur : ' + choixOrdi);<br/>var comparer = function(choix1,choix2) {<br/>    if ( choix1 === choix2 ) {<br/>        return 'Egalité !'; } <br/>        else if ( choix1 === 'pierre' ) {<br/>            if (choix2 === 'ciseaux') {<br/>                return 'pierre gagne !';<br/>            }<br/>            else {<br/>                return 'feuille gagne !';<br/>            }<br/>        }<br/>    else if (choix1 === 'feuille' ) {<br/>        if (choix2 === 'pierre') {<br/>            return 'feuille gagne'; }<br/>        else {<br/>            return 'ciseaux gagnent'; }<br/>    }<br/>    else if ( choix1 === 'ciseaux' ) {<br/>        if (choix2 === 'pierre') {<br/>            return 'pierre gagne !'; }<br/>            else {<br/>                return 'ciseaux gagne !'; }<br/>    }<br/>     if ( choix1 !== 'pierre' || 'feuille' || 'ciseaux') {<br/>         return 'ça n'existe pas ça !' }<br/>    if ( choix1 === 'spock') {<br/>        return 'On est pas à Pasadena ici !' }<br/>}<br/>comparer(choixUtilisateur, choixOrdi);<br/>",
+    "Reponse attendue": "Un jeu de pierre feuille ciseaux aléatoire qui retourne aussi une réponse si l'utilisateur ne réponds ni pierre, ni feuille, ni ciseaux. Si l'utilisateur répond spock, il aura une autre réponse."
+  },
+  {
+    "NOM Prenom": "JAMEN Eva",
+    "Algorithme a afficher": "var nombre = 8;<br/>if (nombre%2 ==0) {<br/>document.write(nombre + ' est pair.');<br/>} else {<br/>document.write(nombre + ' est impair.');<br/>}",
+    "Reponse attendue": "8 est pair."
+  },
+  {
+    "NOM Prenom": "NAEEM Myriam",
+    "Algorithme a afficher": "var travail = 14;<br/>function Motivation(travail) {<br/>if (travail &lt; 10) {<br/>document.write('Je ne suis pas très motivé');<br/>} else if (travail &gt; 15) {<br/>document.write('Je suis super motivé !');<br/>} else {<br/>document.write('Je suis motivé !');<br/>}<br/>}",
+    "Reponse attendue": "Je suis motivé !"
+  },
+  {
+    "NOM Prenom": "MAILLARD Gautier",
+    "Algorithme a afficher": "var a = 3;<br/>var b = 9;<br/>while (a!=b) {<br/>if (a&gt;b) a-=b;<br/>else b-=a;<br/>}<br/>return a; <br/>",
+    "Reponse attendue": 3
+  },
+  {
+    "NOM Prenom": "BAULAND Evie",
+    "Algorithme a afficher": "function Parite(5) { <br/>if (x % 2 == 0) document.write(x + 'est pair&lt;br/&gt;'); <br/>else document.write(x + ' est impair&lt;br/&gt;');<br/>  }",
+    "Reponse attendue": "5 est impair"
+  },
+  {
+    "NOM Prenom": "MARI Léna",
+    "Algorithme a afficher": "function disjontion(){<br/>var x = prompt('Saisir un entier x');<br/>var y = prompt('Saisir un entier y');<br/>var z = prompt('Saisir un entier z'); //les 3 nombres à comparer<br/>if((x == y)||(x == z)||( y == z)) document.write('Vrai');<br/>else document.write('faux');<br/>}<br/>function test_disjonction(){<br/>disjontion();<br/>}<br/>test_disjonction();",
+    "Reponse attendue": "Cet algorithme demande à l’utilisateur trois entiers x​,​ y​et ​z,​ et retourne vrai si deux au moins des trois variables sont égales, et faux sinon."
+  },
+  {
+    "NOM Prenom": "GRANDIN Théo",
+    "Algorithme a afficher": "function fibo(){<br/>var n = 15;<br/>var x = 1;<br/>var y = 1;<br/>var i = 0;<br/>document.write(x +' '+ y);<br/>while (i &lt; n){<br/>var z = x + y;<br/>x = y;<br/>y = z;<br/>document.write(' '+ z);<br/>i++;<br/>}<br/>}",
+    "Reponse attendue": "1,12358E+34"
+  },
+  {
+    "NOM Prenom": "TA Hélène",
+    "Algorithme a afficher": "function demandeA() {<br/>var chaine;<br/>do {<br/>chaine=prompt(‘Entrez une chaîne de caractères contenant le caractère A’);<br/>}<br/>while (chaine.indexOf(‘A’)==-1)<br/>alert(‘La chaîne entrée est’ + chaine);<br/>}",
+    "Reponse attendue": "Cette fonction demande à l'utilisateur de saisir une chaîne de caractères contenant le caractère A, et le redemande tant que l'utilisateur ne l'a pas fait. Il affiche ensuite la chaîne saisie."
+  }
+];

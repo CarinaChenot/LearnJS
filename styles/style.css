@@ -1,0 +1,260 @@
+.clearBoth {
+    clear: both;
+}
+
+button {
+    font-size: 17px;
+    background-color: #25706e;
+    box-shadow: 0 4px #194d4c;
+    border: none;
+    color: #FFF;
+}
+
+button:hover {
+    margin-top: 1px;
+    margin-bottom: -1px;
+    box-shadow: 0 2px #194d4c;
+    color: #FFF;
+}
+
+
+/**** HEADER ****/
+
+header {
+    background-color: #2d3e50;
+    color: #FFF;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+header #logo a {
+    font-size: 50px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+header #headerNav {
+    float: right;
+    font-size: 17px;
+    padding-top: 15px;
+}
+
+nav#headerNav a {
+    display: block;
+    border: 1px solid #3e4e5e;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #FFF;
+}
+
+.headersm {
+    margin-top: -10px;
+    float: right;
+}
+
+nav#headerNav a:hover {
+    background-color: #1abc9c;
+    text-decoration: none;
+}
+
+nav#headerNav img {
+    height: 20px;
+    padding-right: 7px;
+    margin-top: -3px;
+}
+
+
+/**** FOOTER ****/
+
+footer {
+    background-color: #2d3e50;
+    color: #FFF;
+}
+
+footer > div {
+    padding: 10px 0px;
+}
+
+footer span {
+    vertical-align: middle;
+}
+
+footer #social-icons {
+    float: right;
+}
+
+
+/**** INTRO ****/
+
+#intro {
+    margin-top: 71px;
+    position: relative;
+    height: 100vh;
+}
+
+#intro img {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    z-index: -3;
+    margin-top: -21px;
+}
+
+#intro h1 {
+    margin-top: 20%;
+    color: #FFF;
+}
+
+#intro h2 {
+    margin: 0vh 0px 60px 0px;
+    color: #FFF;
+    font-style: none;
+    font-size: 25px;
+}
+
+#intro button {
+    font-size: 17px;
+    background-color: #25706e;
+    box-shadow: 0 4px #194d4c;
+    border: none;
+    color: #FFF;
+}
+
+#intro button:hover {
+    margin-top: 1px;
+    box-shadow: 0 2px #194d4c;
+}
+
+
+/**** ASIDE ****/
+
+aside {
+    top: 50%;
+    left: -170px;
+    height: 250px;
+    position: fixed;
+    background-color: #25706e;
+    border: 4px solid #194d4c;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 190px;
+    border-left: none;
+    padding: 15px;
+    z-index: 10;
+    color: white;
+}
+
+aside img {
+    width: 110px;
+    border: solid 4px #194d4c;
+    border-radius: 100px;
+}
+
+aside p {
+    position: absolute;
+    left: 170px;
+    top: 45%;
+    font-size: 25px;
+    font-style: bold;
+}
+
+#profilePic {
+    width: 110px;
+    margin: auto;
+    margin-top: -45px;
+    padding-bottom: 10px;
+}
+
+#reset {
+    margin-top: 20px;
+    margin-left: 18%;
+    background-color: #e43f33;
+    box-shadow: 0 4px #942219;
+}
+
+
+/**** EXERCICE ****/
+
+section#exercice {
+    padding-top: 50px;
+    background-color: #FFF;
+}
+
+section#exercice div#enonce,
+div#reponse,
+div#solution {
+    border: solid 2px black;
+    height: 300px;
+    background-color: #212124;
+    font-family: 'Source Code Pro';
+    color: #b3babd;
+    padding: 10px 15px;
+}
+
+#solutionContent {
+    margin-top: -40px;
+}
+
+button#valider {
+    float: right;
+    color: #FFF;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+button#valider:hover {
+    margin-top: 11px;
+    margin-bottom: 29px;
+    color: #FFF;
+}
+
+button#faux {
+    margin-top: 10px;
+    float: right;
+    background-color: #e43f33;
+    box-shadow: 0 4px #942219;
+}
+
+button#vrai {
+    float: right;
+    margin-top: 10px;
+    background-color: #2570e6;
+    box-shadow: 0 4px #1747a9;
+    margin-left: 20px;
+}
+
+button#faux:hover {
+    color: #FFF;
+    margin-top: 11px;
+    box-shadow: 0 2px #942219;
+}
+
+button#vrai:hover {
+    color: #FFF;
+    margin-top: 11px;
+    box-shadow: 0 2px #1747a9;
+}
+
+button#suivant {
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+button#suivant:hover {
+    margin-top: 16px;
+}
+
+#suivantContent {
+    padding-bottom: 100px;
+}
+
+#declExo {
+    margin-top: 150px;
+}
+
+#listeExo {
+    margin-left: 50px;
+}

@@ -1,0 +1,444 @@
+//Présentation d’un algorithme présentant une erreur. Il faut fournir un énoncé contenant une erreur ainsi que la version corrigée.
+
+var ex2 = [
+  {
+    "NOM Prenom": "LUCAS Simon",
+    "Algo errone": "var vitesse prompt('Quelle est votre vitesse ?');<br/>if (vitesse &gt; 80) {<br/>console.log('Ralentissez');<br/>}<br/>else {<br/>console.log('Roulez prudemment');<br/>}",
+    "Algo sans erreur": "var vitesse = prompt('Quelle est votre vitesse ?');<br/>if (vitesse &gt; 80) {<br/>console.log('Ralentissez');<br/>}<br/>else {<br/>console.log('Roulez prudemment');<br/>}"
+  },
+  {
+    "NOM Prenom": "CHENOT Carina",
+    "Algo errone": "var x = 0;<br/>      for (var i=0; i&lt;10; i--){<br/>        x+=1;<br/>     }<br/>    <br/>     document.write(x);",
+    "Algo sans erreur": "var x = 0;<br/>      for (var i=0; i&lt;10; i++){<br/>        x+=1;<br/>     }<br/>    <br/>     document.write(x);"
+  },
+  {
+    "NOM Prenom": "CHABAUD Lucie",
+    "Algo errone": "function parite_un_nombre(x){<br/>    if(x % 2 = 0) document.write(x + ' est pair');<br/>    else if document.write (x + ' n'est pas un nombre pair')<br/>}<br/>parite_un_nombre(10);",
+    "Algo sans erreur": "function parite_un_nombre(x){<br/>if(x % 2 == 0) document.write(x + ' est pair');<br/>else if document.write (x + ' n'est pas un nombre pair')<br/>}<br/>parite_un_nombre(10);<br/>"
+  },
+  {
+    "NOM Prenom": "MIELLE Grégoire",
+    "Algo errone": "function parite(x) { <br/> if (x % 2 = 0) { <br/> document.write(x + ' est pair'); <br/> } <br/> else document.write(x + ' est impair'); <br/> } <br/>",
+    "Algo sans erreur": "function parite(x) { <br/> if (x % 2 == 0) { <br/> document.write(x + ' est pair'); <br/> } <br/> else document.write(x + ' est impair'); <br/> } <br/>"
+  },
+  {
+    "NOM Prenom": "GRENET François",
+    "Algo errone": "var x = prompt('Donner la valeur de x:');<br/>var y = prompt('Donner la valeur de y:');<br/>var z = x * y;<br/><br/>document.write('x =' + x + ' et y =' + y + ',' ' + x + ' * ' + y + ' = ' + z + ''' + &lt;br/&gt;);<br/>prompt('appuyer entrée pour continuer');<br/>document.write('x =' + x + ' et y =' + y + ',' ' + x + ' * ' + y + ' = ' + (x*y) + ''' + &lt;br/&gt;);<br/>",
+    "Algo sans erreur": "var x = prompt('Donner la valeur de x:');<br/>var y = prompt('Donner la valeur de y:');<br/>var z = x * y;<br/>document.write('x =' + x + ' et y =' + y + ',' ' + x + ' * ' + y + ' = ' + z + ' ' + '&lt;br/&gt;');<br/>prompt('appuyer entrée pour continuer');<br/>document.write('x =' + x + ' et y =' + y + ',  ' + x + ' * ' + y + ' = ' + (x*y) + ' ' +' &lt;br/&gt;');"
+  },
+  {
+    "NOM Prenom": "FROIDEFONT Margaux",
+    "Algo errone": "var entier = prompt('Saisir le chiffre que vous voulez multiplier'); <br/>if (entier &gt; 9 || entier &lt; 0){ <br/>alert('Le chiffre n'est pas un entier positif!'); <br/>var entier = prompt('Saisir le chiffre que vous voulez multiplier'); <br/>} <br/>else { <br/>for (var i = 0, i &lt; 11, i++){ <br/>résultat = entier * i; <br/>document.write(entier + ' x ' + i + ' = ' + résultat + '&lt;/br&gt;'); <br/>} <br/>}",
+    "Algo sans erreur": "var entier = prompt('Saisir le chiffre que vous voulez multiplier'); <br/>if (entier &gt; 9 || entier &lt; 0){ <br/>alert('Le chiffre n'est pas un entier positif!'); <br/>var entier = prompt('Saisir le chiffre que vous voulez multiplier'); <br/>} <br/>else { <br/>for (var i = 0; i &lt; 11; i++){ <br/>résultat = entier * i; <br/>document.write(entier + ' x ' + i + ' = ' + résultat + '&lt;/br&gt;'); <br/>} <br/>}"
+  },
+  {
+    "NOM Prenom": "VILLAGEOIS Tran Minh",
+    "Algo errone": "Trouver l'erreur dans cet algorithme suivant : <br/> nom=prompt('quel est votre nom?'); <br/> document.write('Bonjour +nom+, comment allez-vous?');",
+    "Algo sans erreur": "nom=prompt('quel est votre nom?'); <br/> document.write('Bonjour '+nom+', comment allez-vous?');"
+  },
+  {
+    "NOM Prenom": "CHÂTEAU Robin",
+    "Algo errone": "function quotient{<br/>var x = prompt('Saisir une valeur x');<br/>var y = prompt('Saisir une valeur y');<br/>document.write( x + ' / ' + y ' = ' + (x/y));<br/>}<br/>quotient();",
+    "Algo sans erreur": "function quotient(){<br/>var x = prompt('Saisir une valeur x');<br/>var y = prompt('Saisir une valeur y');<br/>document.write( x + ' / ' + y ' = ' + (x/y));<br/>}<br/>quotient();"
+  },
+  {
+    "NOM Prenom": "FROIDEFONT Margaux",
+    "Algo errone": "var entier = prompt('Saisir le chiffre que vous voulez multiplier');<br/>if (entier &gt; 9 || entier &lt; 0){<br/> alert('Le chiffre n'est pas un entier positif!');<br/> var entier = prompt('Saisir le chiffre que vous voulez multiplier'); <br/>} <br/>else { <br/>for (var i = 0, i &lt; 11, i++){ <br/>résultat = entier * i; <br/>document.write(entier + ' x ' + i + ' = ' + résultat + '&lt;/br&gt;'); <br/> } <br/>}",
+    "Algo sans erreur": "var entier = prompt('Saisir le chiffre que vous voulez multiplier');<br/>if (entier &gt; 9 || entier &lt; 0){<br/> alert('Le chiffre n'est pas un entier positif!');<br/> var entier = prompt('Saisir le chiffre que vous voulez multiplier'); <br/>} <br/>else { <br/>for (var i = 0; i &lt; 11; i++){ <br/>résultat = entier * i; <br/>document.write(entier + ' x ' + i + ' = ' + résultat + '&lt;/br&gt;'); <br/> } <br/>}"
+  },
+  {
+    "NOM Prenom": "CHÂTEAU Robin",
+    "Algo errone": "function quotient{<br/>var x = prompt('Saisir une valeur x');<br/>var y =<br/>prompt('Saisir une valeur y');<br/>document.write( x + ' / ' + y ' = ' + (x/y));<br/>}<br/>quotient();",
+    "Algo sans erreur": "function quotient(){<br/>var x = prompt('Saisir une valeur x');<br/>var y =<br/>prompt('Saisir une valeur y');<br/>document.write( x + ' / ' + y ' = ' + (x/y));<br/>}<br/>quotient();"
+  },
+  {
+    "NOM Prenom": "MARTINEZ Valentin",
+    "Algo errone": "&lt;html&gt;<br/>&lt;body&gt;<br/>&lt;script&gt;<br/>var a = prompt('Entrez le premier nombre');<br/>var b = prompt('Entrer le deuxième nombre');<br/>var somme = (a) + (b);<br/>document.write('La somme de '+a+' et '+b+' égal à '+ somme);<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;",
+    "Algo sans erreur": "&lt;htm&gt;<br/>&lt;body&gt;<br/>&lt;script&gt;<br/>var a = prompt('Entrez le premier nombre');<br/>var b = prompt('Entrer le deuxième nombre');<br/>var somme = parseInt(a) + parseInt(b);<br/>document.write('La somme de '+a+' et '+b+' égal à '+ somme);<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;"
+  },
+  {
+    "NOM Prenom": "ANDRIANOFF Paul",
+    "Algo errone": "var y; //l'entier à comparer<br/>y = prompt('entrer un nombre');<br/>if( x &lt; y ){<br/>document.write(y + ' est supérieur à ' + x);<br/>}<br/>else{<br/>if(x &gt;= y){<br/>document.write(y + ' est inférieur à ' + x);<br/>}<br/>else{<br/>document.write(y + ' est égal à ' + x)<br/>}<br/>}<br/>}",
+    "Algo sans erreur": "var y; //l'entier à comparer<br/>y = prompt('entrer un nombre');<br/>if( x &lt; y ){<br/>document.write(y + ' est supérieur à ' + x);<br/>}<br/>else{<br/>if(x &gt; y){<br/>document.write(y + ' est inférieur à ' + x);<br/>}<br/>else{<br/>document.write(y + ' est égal à ' + x)<br/>}<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "EL AYADI Naïm",
+    "Algo errone": "var age = prompt('Entrez votre age'); <br/> if(age == 18)( <br/> document.write('Vous venez d\\'être majeur'); <br/> } <br/> else if(age &lt; 18){ <br/> document.write('Vous ne pouvez pas jouer à ce jeu'); <br/> } <br/> else{ <br/> document.write('Vous pouvez jouer à ce jeu'); <br/> }",
+    "Algo sans erreur": "var age = prompt('Entrez votre age'); <br/> if(age == 18){ <br/> document.write('Vous venez d\\'être majeur'); <br/> } <br/> else if(age &lt; 18){ <br/> document.write('Vous ne pouvez pas jouer à ce jeu'); <br/> } <br/> else{ <br/> document.write('Vous pouvez jouer à ce jeu'); <br/> }"
+  },
+  {
+    "NOM Prenom": "STEPHANT Yann",
+    "Algo errone": "function calcul(){<br/>var x, y;<br/>document.write('choisir x' + '&lt;br/&gt;');<br/>x = parseInt(prompt())<br/>var op = prompt('Choisir un opérateur parmi ' + '+, ' + '-, ' + 'x, ' + ' et /');<br/>document.write('choisir y' + '&lt;br/&gt;');<br/>y = parseInt(prompt());<br/>if ((y == 0) && (op == '/')) document.write('Division par 0 impossible!');<br/>else if (op == '+') {document.write(x + op + y + ' = ' + (x+y))}<br/>else if (op == '-') {document.write(x + op + y + ' = ' + (x-y))}<br/>else if (op == '/') {document.write(x + op + y + ' = ' + (x/y))}<br/>else if (op == 'x') {document.write(x + op + y + ' = ' + (x*y));}<br/>}<br/>calcul();",
+    "Algo sans erreur": "function calcul(){<br/>var x, y;<br/>document.write('choisir x' + '&lt;br/&gt;');<br/>x = parseInt(prompt());<br/>var op = prompt('Choisir un opérateur parmi ' + '+, ' + '-, ' + 'x, ' + ' et /');<br/>document.write('choisir y' + '&lt;br/&gt;');<br/>y = parseInt(prompt());<br/>if ((y == 0) && (op == '/')) document.write('Division par 0 impossible!');<br/>else if (op == '+') {document.write(x + op + y + ' = ' + (x+y))}<br/>else if (op == '-') {document.write(x + op + y + ' = ' + (x-y))}<br/>else if (op == '/') {document.write(x + op + y + ' = ' + (x/y))}<br/>else if (op == 'x') {document.write(x + op + y + ' = ' + (x*y));}<br/>}<br/>calcul();"
+  },
+  {
+    "NOM Prenom": "YILDIRIM Serhat",
+    "Algo errone": "Le code ci-dessous doit demander à l’utilisateur son âge pour ensuite l’afficher dans la page cependant il est faux, corrigez le.",
+    "Algo sans erreur": "<br/>var x = window.prompt('Donnez votre age');<br/>document.write(x);"
+  },
+  {
+    "NOM Prenom": "YILDIRIM Serhat",
+    "Algo errone": "Le code ci-dessous doit demander à l’utilisateur son âge pour ensuite l’afficher dans la page cependant il est faux, corrigez le.<br/> var x = window.prompt('Donnez votre age');<br/>document.write(x);<br/>",
+    "Algo sans erreur": "var x = parseInt(window.prompt('Donnez votre âge'));<br/>document.write(x)"
+  },
+  {
+    "NOM Prenom": "DE LA FOUCHARDIERE Antoine",
+    "Algo errone": "Enoncé : Cette algorithme doit permettre de vérifier que deux mots de passe sont les mêmes. Trouvez l'erreur qui lui permettra de fonctionner.<br/>",
+    "Algo sans erreur": "function validation(f) {<br/>if (f.mdp1.value == '' || f.mdp2.value == '')<br/>{<br/>alert('Tous les champs ne sont pas remplis');<br/>f.mdp1.focus();<br/>return false;<br/>}<br/>else if (f.mdp1.value != f.mdp2.value) {<br/>alert('Ce ne sont pas les mêmes mots de passe!');<br/>f.mdp1.focus();<br/>return false;<br/>}<br/>else if<br/>(f.mdp1.value == f.mdp2.value) {<br/>return true;<br/>}<br/>else {<br/>f.mdp1.focus();<br/>return false;<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "FOGGETTI Clara",
+    "Algo errone": "Ecrivez un algorithme qui demande un nombre à l’utilisateur et qui  indique si son nombre appartient ou non à l’intervalle [0;10].",
+    "Algo sans erreur": "function intervalle(a,b) { <br/> if (a &gt; b) document.write('Erreur programme.'); <br/> else { <br/> var x = prompt('Saisir x'); <br/> if (a &lt;= x && x &lt;= b) document.write(x + ' is in [' + a + ', ' + b + ']&lt;br/&gt;'); <br/> else document.write(x + ' is not in [' + a + ', ' + b + ']&lt;br/&gt;'); <br/> } <br/> } <br/> var a = 1; <br/> var b = 10; <br/> intervalle (a, b);"
+  },
+  {
+    "NOM Prenom": "ZITA Kévy",
+    "Algo errone": "// Trouver l'erreur dans cet algorithme (réutilisation d'une variable locale dans une autre fonction)",
+    "Algo sans erreur": "function addition()<br/>{<br/>var x = prompt('Saisir un chiffre');<br/>var y = prompt('Saisir un chiffre');<br/>var z = x + y;<br/>}<br/>document.write(z);"
+  },
+  {
+    "NOM Prenom": "ZITA Kévy",
+    "Algo errone": "// Trouver l'erreur dans cet algorithme (réutilisation d'une variable locale dans une autre fonction)",
+    "Algo sans erreur": "function addition()<br/>{<br/>var x = prompt('Saisir un chiffre');<br/>var y = prompt('Saisir un chiffre');<br/>var z = x + y;<br/>}<br/>document.write(z);"
+  },
+  {
+    "NOM Prenom": "BUSSON Kimberly",
+    "Algo errone": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr-FR'&gt;<br/>&lt;head&gt;<br/> &lt;meta charset='utf-8'&gt;<br/> &lt;title&gt;Exercice 3 &lt;/title&gt;<br/>&lt;/head&gt;<br/> &lt;body&gt;<br/>  &lt;script&gt;<br/>    /* Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N */<br/>     var N;<br/>    var i;<br/> var somme = 0;<br/>document.write('Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N&lt;br/&gt;');<br/>    N = prompt('Entrez une valeur entière');<br/>    N = Number(N);<br/>   for (i = 1; i &lt; N; i = i + 1)<br/> {<br/> somme = somme + i; <br/>}<br/> document.write('la somme de tous les nombres compris entre 1 et '+N+' vaut '+somme+'&lt;br/&gt;')<br/>  &lt;/script&gt;<br/> &lt;/body&gt;<br/>&lt;/html&gt;<br/>",
+    "Algo sans erreur": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr-FR'&gt;<br/>&lt;head&gt;<br/> &lt;meta charset='utf-8'&gt;<br/> &lt;title&gt;Exercice 2 &lt;/title&gt;<br/>&lt;/head&gt;<br/> &lt;body&gt;<br/>  &lt;script&gt;<br/>    /* Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N */<br/>  var N;<br/>    var i;<br/>    var somme = 0;<br/>  document.write('Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N&lt;br/&gt;');<br/>    N = prompt('Entrez une valeur entière');<br/>    N = Number(N);<br/>    for (i = 1; i &lt;= N; i = i + 1){<br/>somme = somme + i;<br/>}<br/>document.write('la somme de tous les nombres compris entre 1 et '+N+' vaut '+somme+'&lt;br/&gt;');<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>"
+  },
+  {
+    "NOM Prenom": "DALLE Kenrig",
+    "Algo errone": "var a=3;<br/>var b=2;<br/>function multiplication(x)<br/>{<br/>return 3*a;<br/>}<br/>{<br/>return 3*b;<br/>}<br/>function affiche()<br/>{<br/>alert(multiplie(a)); <br/>alert(multiplie(b));<br/>}",
+    "Algo sans erreur": "var a=3;<br/>var b=2;<br/>function multiplication(x)<br/>{<br/>return 3*x;<br/>}<br/>function affiche()<br/>{<br/>alert(multiplie(a));<br/> alert(multiplie(b));<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "MARUSIC Florian",
+    "Algo errone": "Trouver l'erreur dans cet algorithme (réutilisation d'une variable locale dans une autre fonction)",
+    "Algo sans erreur": "function addition()<br/> { <br/> var x = prompt('Saisir un chiffre'); <br/> var y = prompt('Saisir un chiffre'); <br/> var z = x + y; <br/>} <br/>document.write(z);"
+  },
+  {
+    "NOM Prenom": "MARUSIC Florian",
+    "Algo errone": "Trouver l'erreur dans cet algorithme (réutilisation d'une variable locale dans une autre fonction)",
+    "Algo sans erreur": "function addition()<br/> { <br/> var x = prompt('Saisir un chiffre'); <br/> var y = prompt('Saisir un chiffre'); <br/> var z = x + y; <br/>} <br/>document.write(z);"
+  },
+  {
+    "NOM Prenom": "WILLAME Marie-Charlotte",
+    "Algo errone": "function disjontion(){<br/>var x, y, z;<br/>x = prompt('entrer un nombre');<br/>y = prompt('entrer un nombre');<br/>z = prompt('entrer un nombre');{{if((x == y)&&(x == z)&&( y == z)) return true;<br/>else return false;<br/>}<br/>function test(){<br/>var resultat = disjontion();<br/>document.write(resultat);<br/>}<br/>test();",
+    "Algo sans erreur": "function disjontion(){<br/>var x, y, z; //les 3 nombres à comparer<br/>x = prompt('entrer un nombre');<br/>y = prompt('entrer un nombre');<br/>z = prompt('entrer un nombre');<br/>if((x == y)||(x == z)||( y == z)) return true;<br/>else return false;<br/>}<br/>function test(){<br/>var resultat = disjontion();<br/>document.write(resultat);<br/>}<br/>test();"
+  },
+  {
+    "NOM Prenom": "DELAURIERE Solenne",
+    "Algo errone": "function sup_inf(x){<br/>var y;<br/>y=prompt('saisir un nombre y : '); // y est l'entier saisi par l'utilisateur<br/>if (y&lt;=x) document.write(y +' est supérieur à '+ x + '&lt;br/&gt;');<br/>else document.write(y +' est inférieur à ' + x + '&lt;br/&gt;');<br/>}<br/>sup_inf(15);",
+    "Algo sans erreur": "function sup_inf(x){<br/>var y;<br/>y=prompt('saisir un nombre y : '); // y est l'entier saisi par l'utilisateur<br/>if (y&gt;=x) document.write(y +' est supérieur à '+ x + '&lt;br/&gt;');<br/>else document.write(y +' est inférieur à ' + x + '&lt;br/&gt;');<br/>}<br/>sup_inf(15);"
+  },
+  {
+    "NOM Prenom": "TURPIN Antoine",
+    "Algo errone": "var x = prompt('Saisir une valeur de 0 à 10');<br/>do {<br/> x += 1; <br/>} for (x &lt; 10);",
+    "Algo sans erreur": "var x = prompt('Saisir une valeur de 0 à 10'); <br/> do { <br/> x += 1; <br/> } while (x &lt; 10);"
+  },
+  {
+    "NOM Prenom": "BRILLION Kévin",
+    "Algo errone": "function testWhile() {<br/>    var chaine;<br/>    do {<br/>        chaine=prompt('Entrez une chaîne de caractères contenant le caractère @');<br/>    }while (chaine.indexOf('@')==-1);<br/>    alert('La chaîne entrée est '+chaine)<br/>}",
+    "Algo sans erreur": "function testWhile(){<br/>var chaine;<br/>do {<br/>chaine=prompt('Entrez une chaîne de caractères contenant le caractère @');<br/>}while (chaine.indexOf('@')==-1);<br/>alert('La chaîne entrée est '+chaine);<br/>}"
+  },
+  {
+    "NOM Prenom": "NGO TRUNG Matthias",
+    "Algo errone": "var x, y, z;<br/>      x = prompt('Saisir un entier');<br/>      y = prompt('Saisir un entier');<br/>      z = prompt('Saisir un entier');<br/>      if (((x==y)&&!(y==z))||((y==z)&&!(x==z))||((x==z)&&!(x==y)){<br/>        document.write('Deux et seulement deux des trois variables sont égales.');<br/>      } else {<br/>        document.write('Soit les entiers ne sont pas égaux soit les trois sont égaux.');<br/>      }",
+    "Algo sans erreur": "var x, y, z;<br/>x = prompt('Saisir un entier »);<br/>y = prompt('Saisir un entier »);<br/>z = prompt('Saisir un entier »);<br/>if (((x==y)&&!(y==z))||((y==z)&&!(x==z))||((x==z)&&!(x==y))){<br/>document.write(‘Deux et seulement deux des trois variables sont égales.’);<br/>} else {<br/>document.write(‘Soit les entiers ne sont pas égaux soit les trois sont égaux.’);<br/>}"
+  },
+  {
+    "NOM Prenom": "HÉNAULT Thomas",
+    "Algo errone": "var noms = ['Thomas', 'Lisa', 'Sophie', 'Anne', 'Benoit'];<br/>for (var i = 0; i &lt; noms.length) {<br/> console.log('Je connais quelqu'un appelé ' + '' + noms[i]); <br/>}",
+    "Algo sans erreur": "var noms = ['Thomas', 'Lisa', 'Sophie', 'Anne', 'Benoit'];<br/><br/>for (var i = 0; i &lt; noms.length; i++) {<br/> <br/>console.log('Je connais quelqu'un appelé '+ ''+ noms[i]); <br/>}"
+  },
+  {
+    "NOM Prenom": "FOURNIER Méric",
+    "Algo errone": "do{<br/>document.write(Hello World);<br/> }while(i&lt;5)",
+    "Algo sans erreur": "do{<br/>document.write('Hello World');<br/> }while(i&lt;5)"
+  },
+  {
+    "NOM Prenom": "DURET Gabriel",
+    "Algo errone": "$(document).ready(function(){<br/>    $('h2').on('click'),function(){<br/>        if($(this).next('p').hasClass('.active'))<br/>        {<br/>          $('.active').removeClass('.active').slideToggle();<br/>        }<br/>    };<br/>});<br/>",
+    "Algo sans erreur": "$(document).ready(function(){<br/>$('h2').on('click'),function(){<br/>if($(this).next('p').hasClass('.active'))<br/>{<br/>$('.active').removeClass('active').slideToggle();<br/>}<br/>};<br/>});"
+  },
+  {
+    "NOM Prenom": "LUANGKHOT Octave",
+    "Algo errone": "Var answer = 0 ;<br/>For (i = 0 ; i &lt; array .length ; i = i + 2) ;<br/>if (array[i] == 0 ) ;<br/>document.write i ;<br/>end",
+    "Algo sans erreur": "Var answer = 0 ;<br/>For (i = 0 ; i &lt; array .length ; i = i ++) ;<br/>if (array[i] == 0 ) ;<br/>document.write i ;<br/>end"
+  },
+  {
+    "NOM Prenom": "HAZAN Kyle",
+    "Algo errone": "Concevoir un algorithme qui prend en paramètre deux entiers A et B, s’arrête avec un message d’erreur si a &gt; b, et demande sinon à l’utilisateur de saisir un entier y puis indique par une alerte si Y est dans l’intervalle [a, b] ou non.",
+    "Algo sans erreur": "function interval(a, b) {<br/> if (a &gt; b) console.log('erreur programme');<br/>else {<br/> var x = prompt('saisir x');<br/> <br/>if ((a &lt;= x) && (x &lt;= b)) console.log(x + ' in [' + a + ', ' + b + ']&lt;br/&gt;');<br/> else console.log(x + ' not in [' + a + ', ' + b + ']&lt;br/&gt;');}}<br/>Erreurs : remplacer les 3 console.log par Alert"
+  },
+  {
+    "NOM Prenom": "PAWLAK Camille",
+    "Algo errone": "var x = setInterval(alertesRegulières);<br/>function alertesRegulières() {<br/>alert('Hello!');<br/>}",
+    "Algo sans erreur": "var x = setInterval(alertesRegulières, 100);<br/>function alertesRegulières() {<br/>alert('Hello!');<br/>}"
+  },
+  {
+    "NOM Prenom": "PAWLAK Camille",
+    "Algo errone": "var x = setInterval(alertesRegulières);<br/>function alertesRegulières() {<br/>alert('Hello!');<br/>}",
+    "Algo sans erreur": "var x = setInterval(alertesRegulières, 100);<br/>function alertesRegulières() {<br/>alert('Hello!');<br/>}"
+  },
+  {
+    "NOM Prenom": "VANSEVEREN Lucile",
+    "Algo errone": "Variable Phrase en Caractère <br/> Variables Nb, i en Entier <br/> Debut <br/> Ecrire 'Entrez une phrase : ' <br/> Lire Phrase <br/> Pour i ← 1 à Len(Phrase) <br/> Si Mid(Phrase, i , 1) = ' ' Alors <br/> Nb ← Nb + 1 <br/> FinSi <br/> i suivant <br/> Ecrire 'Cette phrase compte ', Nb + 1, ' mots' <br/> Fin",
+    "Algo sans erreur": "Variable Phrase en Caractère <br/> Variables Nb, i en Entier <br/> Debut <br/> Ecrire 'Entrez une phrase : ' <br/> Lire Phrase <br/> Nb ← 0 <br/> Pour i ← 1 à Len(Phrase) <br/> Si Mid(Phrase, i , 1) = ' ' Alors <br/> Nb ← Nb + 1 <br/> FinSi <br/> i suivant <br/> Ecrire 'Cette phrase compte ', Nb + 1, ' mots' <br/> Fin"
+  },
+  {
+    "NOM Prenom": "BENOLIEL Alexis",
+    "Algo errone": "function helloworld() {<br/>var i = 0<br/>while (i &lt; 100) {document.write(i + 'hello world&lt;br&gt;');<br/>}<br/>}<br/>helloworld();",
+    "Algo sans erreur": "function helloworld() {<br/>var i = 0<br/>while (i &lt; 100) {<br/>i++<br/>document.write(i + 'hello world&lt;br&gt;');<br/>}<br/>}<br/>helloworld();"
+  },
+  {
+    "NOM Prenom": "PHAM Bich-Tram Cynthia",
+    "Algo errone": "Cet algorithme permet la mise en pratique de l'algorithme d'Euclide<br/>int function(int a, int b) {<br/>int c;<br/>while (b!=0) {<br/>c=a % b;<br/>a=b;<br/>}<br/>return a;<br/>}<br/>",
+    "Algo sans erreur": "int function(int a, int b) {<br/>int c;<br/>while (b!=0) {<br/>c=a %b;<br/>a=b;<br/>b=c;<br/>}<br/>return a;<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "FRANCO Lucille",
+    "Algo errone": "&lt;script&gt;<br/>var nombre_voyelle = 0;<br/>var phrase=prompt('Donnez une phrase !')<br/>for (var i = 0; i &lt; phrase.length i++)<br/>{<br/> if (phrase[i]=='a'||<br/>phrase[i]=='e'||<br/>phrase[i]=='i'||<br/>  phrase[i]=='o'||<br/>phrase[i]=='u' <br/>phrase[i]=='y'<br/>)<br/> {<br/>nombre_voyelle+;<br/> }<br/>}<br/>document.write('La phrase contient ' + 'nombre_voyelle' + ' voyelles');<br/>&lt;/script&gt;",
+    "Algo sans erreur": "&lt;script&gt;<br/>var nombre_voyelle = 0;<br/>var phrase=prompt('Donnez une phrase !');<br/>for (var i = 0; i &lt; phrase.length; i++)<br/>{<br/> if (phrase[i]=='a'||<br/>phrase[i]=='e'||<br/>phrase[i]=='i'||<br/>  phrase[i]=='o'||<br/>phrase[i]=='u'|| <br/>phrase[i]=='y'<br/>)<br/> {<br/>nombre_voyelle++;<br/> }<br/>}<br/>document.write('La phrase contient ' + nombre_voyelle + ' voyelles');<br/>&lt;/script&gt;"
+  },
+  {
+    "NOM Prenom": "BERNAUX Nicolas",
+    "Algo errone": "var x, y; // deux entiers, les opérandes <br/>var z; // le résultat du produit de x par y<br/>document.write('Saisir x&lt;br/&gt;'); <br/>x = prompt();<br/>document.write('Saisir y&lt;br/&gt;');<br/>y = prompt();<br/>x = z * y;<br/>document.write(x + ' x ' + y + ' = ' + z + '&lt;br/&gt;');",
+    "Algo sans erreur": "var x, y; // deux entiers, les opérandes <br/>var z; // le résultat du produit de x par y<br/>document.write('Saisir x&lt;br/&gt;'); <br/>x = prompt();<br/>document.write('Saisir y&lt;br/&gt;');<br/>y = prompt();<br/>z = x * y;<br/>document.write(x + ' x ' + y + ' = ' + z + '&lt;br/&gt;');<br/>"
+  },
+  {
+    "NOM Prenom": "HADDAD Marie-Elise",
+    "Algo errone": "function exclusivite(){ <br/>            var x, y, z; <br/>            x = prompt('entrer un nombre'); <br/>            y = prompt('entrer un nombre'); <br/>            z = prompt('entrer un nombre'); <br/>            if(((x == y)&&(x !== z))||((y == z)&&(y !== x))||((x == z)&&(z !== y))) return true; <br/>            else return false; <br/>        }<br/>        <br/>        function test(){ <br/>            var resultat = exclusivite(); <br/>            document.write(resultat); <br/>        }<br/>        test(); <br/>",
+    "Algo sans erreur": "function exclusivite(){ <br/>            var x, y, z; <br/>            x = prompt('entrer un nombre'); <br/>            y = prompt('entrer un nombre'); <br/>            z = prompt('entrer un nombre'); <br/>            if(((x == y)&&(x != z))||((y == z)&&(y != x))||((x == z)&&(z != y))) return true; <br/>            else return false; <br/>        }<br/>        <br/>        function test(){ <br/>            var resultat = exclusivite(); <br/>            document.write(resultat); <br/>        }<br/>        test(); <br/>"
+  },
+  {
+    "NOM Prenom": "QUERCIA Joseph",
+    "Algo errone": "var nombreUtilisateur = prompt('Saisir un nombre');<br/>var nombreMachine = Math.floor(Math.random()*100);<br/>var victoire = document.querySelector('#zoneVictoire');<br/>while (nombreUtilisateur==nombreMachine) {<br/>if (nombreUtilisateur &gt; nombreMachine) {<br/>window.alert('Trop grand');<br/>}<br/>else {<br/>window.alert('Trop petit');<br/>}<br/>nombreUtilisateur = prompt('Saisir un nombre');<br/>}<br/>victoire.innerHTML='Gagné!';",
+    "Algo sans erreur": "var nombreUtilisateur = prompt('Saisir un nombre');<br/>var nombreMachine = Math.floor(Math.random()*100);<br/>var victoire = document.querySelector('#zoneVictoire');<br/>while (nombreUtilisateur!=nombreMachine) {<br/>if (nombreUtilisateur &gt; nombreMachine) {<br/>window.alert('Trop grand');<br/>}<br/>else {<br/>window.alert('Trop petit');<br/>}<br/>nombreUtilisateur = prompt('Saisir un nombre');<br/>}<br/>victoire.innerHTML='Gagné!';"
+  },
+  {
+    "NOM Prenom": "THERY Alex",
+    "Algo errone": "function jeuDeLavie(nw, nn, ne, ee, se, ss, sw, ww, c) {<br/>            if(c == 0){<br/>                if((+nw + +nn + +ne + +ee + +se + +se + +sw + +ww) == 3) {<br/>                    c = 1;<br/>                }<br/>            }<br/>            else{<br/>                if(((+nw + +nn + +ne + +ee + +se + +se + +sw + +ww) &lt; 2)&&((+nw + +nn + +ne + +ee + +se + +se + +sw + +ww) &gt; 3)){<br/>                    c = 0;<br/>                }<br/>            }<br/>            return c;<br/>        }<br/>",
+    "Algo sans erreur": "function jeuDeLavie(nw, nn, ne, ee, se, ss, sw, ww, c) {<br/>            if(c == 0){<br/>                if((+nw + +nn + +ne + +ee + +se + +se + +sw + +ww) == 3) {<br/>                    c = 1;<br/>                }<br/>            }<br/>            else{<br/>                if(((+nw + +nn + +ne + +ee + +se + +se + +sw + +ww) &lt; 2)||((+nw + +nn + +ne + +ee + +se + +se + +sw + +ww) &gt; 3)){<br/>                    c = 0;<br/>                }<br/>            }<br/>            return c;<br/>        }<br/>"
+  },
+  {
+    "NOM Prenom": "KIENY Lorène",
+    "Algo errone": "function parite(x) {<br/>if (x / 2 == 0) document.write(x + 'est pair&lt;br/&gt;');<br/>else document.write(x + 'est impair&lt;br/&gt;');<br/>}",
+    "Algo sans erreur": "function parite(x) {<br/>if (x % 2 == 0) document.write(x + 'est pair&lt;br/&gt;');<br/>else document.write(x + 'est impair&lt;br/&gt;');<br/>}"
+  },
+  {
+    "NOM Prenom": "LAURENT Adrien",
+    "Algo errone": "for (var i = 0; i &lt; n; i++) { <br/>        for (var j = 0; j &lt; n) { <br/>            if ((i + j) % 2 == 0) document.write('@');<br/>            else document.write(' ');<br/>        }<br/>        document.write('&lt;br/&gt;'); <br/>    }<br/>    document.write('&lt;br/&gt;');",
+    "Algo sans erreur": "for (var i = 0; i &lt; n; i++) {<br/>for (var j = 0; j &lt; n; j++) {<br/>if ((i + j) % 2 == 0) document.write('@');<br/>else document.write(' ');<br/>}<br/>document.write('&lt;br/&gt;');<br/>}<br/>document.write('&lt;br/&gt;');"
+  },
+  {
+    "NOM Prenom": "DINH Quang Tuyen",
+    "Algo errone": "Concevoir un algorithme qui demande à utilisateur 2 nombres et 1 opérateur (+ - * /), puis demande à utilisateur la réponse de l'opération et lui informe si sa réponse est vrai ou faux",
+    "Algo sans erreur": "var a = parseInt(window.prompt('Choisissez le 1e nombre ?'));<br/>var b = parseInt(window.prompt(''Choisissez le 2e nombre ?'));<br/>var opérateur = window.prompt('Choissiez un opérateur ?');<br/>var c;<br/>if (opérateur == '+'){<br/>    c = a + b;<br/>}<br/>else if (opérateur == '-'){<br/>    c = a - b;<br/>}<br/>else if (opérateur == '*'){<br/>    c = a * b;<br/>}<br/>else{<br/>    c= a / b;<br/>}<br/>var d = parseInt(window.prompt('Votre résultat ?'));<br/>if (d == c){<br/>    document.write('Très bien !!!');}<br/>else{<br/>    document.write('Désolé! C'est ' + c);<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "FERREIRA DUARTE Marina",
+    "Algo errone": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr'&gt;<br/>    &lt;head&gt;<br/>        &lt;meta charset='UTF-8'&gt;<br/>        &lt;title&gt;Exercice 2 : Corriger la syntaxe de l'exercice pour qu'il fonctionne (8 erreurs à trouver)&lt;/title&gt;<br/>    &lt;/head&gt;<br/>    &lt;body&gt;<br/>        &lt;script&gt;<br/>            <br/>            function afficher(txt, t){<br/>                document.write(txt);<br/>                for(var i = 0; i &lt; t.length; i++)<br/>                document.write(t[i] + ' ';<br/>                }<br/>                document.write(&lt;br/&gt;');<br/>                }<br/>            <br/>            function insert(newTab, nombre){<br/>                var i = 0;<br/>                while (newTab[i] &lt; nombre) i++;<br/>                for (var j = newTab.length - 1; j &gt;= i; j--) newTab[j+1] == newTab[j];<br/>                newTab[i] = nombre;<br/>            }<br/>            <br/>            var newTab = 0, 4, 6, 7, 9, 14, 17, 21];<br/>            afficher ('Le tableau est : ', newTab);<br/>            var nombre = (prompt('Entrez le nombre à insérer de façon à ce que les valeurs restent croissantes));<br/>            insert(newTab, nombre);<br/>            afficher('Après insertion : ', newTab)<br/>            <br/>        &lt;/script&gt;<br/>    &lt;/body&gt;<br/>&lt;/html&gt;",
+    "Algo sans erreur": "&lt;!DOCTYPE html&gt;&lt;html lang='fr'&gt;<br/>&lt;head&gt;<br/>&lt;meta charset='UTF-8'&gt;<br/>&lt;title&gt;Exercice de syntaxe du JS&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;script&gt;<br/>function afficher(txt, t){<br/>document.write(txt);<br/>for(var i = 0; i &lt; t.length; i++){<br/>document.write(t[i] + ' ');<br/>}<br/>document.write('&lt;br/&gt;');<br/>}<br/>function insert(newTab, nombre){<br/>var i = 0;<br/>while (newTab[i] &lt; nombre) i++;<br/>for (var j = newTab.length - 1; j &gt;= i; j--) newTab[j+1] = newTab[j];<br/>newTab[i] = nombre;<br/>}<br/>var newTab = [0, 4, 6, 7, 9, 14, 17, 21];<br/>afficher ('Le tableau est : ', newTab);<br/>var nombre = parseInt(prompt('Entrez le nombre à insérer de façon à ce que les valeurs restent croissantes'));<br/>insert(newTab, nombre);<br/>afficher('Après insertion : ', newTab);<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;"
+  },
+  {
+    "NOM Prenom": "ESDOLUC Paul",
+    "Algo errone": "function rectangle(){(<br/>) var a = parseInt(prompt('Entre la largeur du rectangle')); (<br/>) var b  = parseInt(prompt('Entre la hauteur du rectangle')); (<br/>) for(var i = 0;i &gt; b; i++){ //Pour les lignes (<br/>)for (var j = 0;j &lt; a; j++) document.write('*'); //pour les colonnes document.write('&lt;/br&gt;'); (<br/>)} (<br/>)} (<br/>)rectangle();",
+    "Algo sans erreur": "function rectangle(){(<br/>) var a = parseInt(prompt('Entre la largeur du rectangle')); (<br/>) var b  = parseInt(prompt('Entre la hauteur du rectangle')); (<br/>) for(var i = 0;i &lt; b; i++){ //Pour les lignes (<br/>)for (var j = 0;j &lt; a; j++) document.write('*'); //pour les colonnes document.write('&lt;/br&gt;'); (<br/>)} (<br/>)} (<br/>)rectangle();"
+  },
+  {
+    "NOM Prenom": "BAUNACH Yoann",
+    "Algo errone": "function exo2() {<br/>for (var i = 0 ; i++ ; i &lt; 5) {<br/>var x = i * i;<br/>document.write('l'aire d'un carré de côté ' + i + ' est ' + x + '&lt;br/&gt;');<br/>}<br/>}",
+    "Algo sans erreur": "function exo2() {<br/>for (var i = 0 ; i&lt;5 ; i++) {<br/>var x = i * i;<br/>document.write('l'aire d'un carré de côté ' + i + ' est ' + x + '&lt;br/&gt;');<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "BAUNACH Yoann",
+    "Algo errone": "function exo2() {<br/>  for (var i = 0 ; i++ ; i &lt; 5) {<br/>    var x = i * i;<br/>    document.write('l'aire d'un carré de côté ' + i + ' est ' + x + '&lt;br/&gt;');<br/>  }<br/>}",
+    "Algo sans erreur": "function exo2() {<br/>  for (var i = 0 ; i &lt; 5 ; i++) {<br/>    var x = i * i;<br/>    document.write('l'aire d'un carré de côté ' + i + ' est ' + x + '&lt;br/&gt;');<br/>  }<br/>}"
+  },
+  {
+    "NOM Prenom": "PHAN Kelly",
+    "Algo errone": "var nom; <br/> nom = parseInt(prompt('Veuillez saisir votre prénom')); <br/> document.write('Hello '+ nom + ', How are you?&lt;br/&gt;');",
+    "Algo sans erreur": "var nom; <br/> nom = prompt('Veuillez saisir votre prénom'); <br/> document.write('Hello '+ nom + ', How are you?&lt;br/&gt;');"
+  },
+  {
+    "NOM Prenom": "FERREIRA DUARTE Marina",
+    "Algo errone": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr'&gt;<br/>    &lt;head&gt;<br/>        &lt;meta charset='UTF-8'&gt;<br/>        &lt;title&gt;Exercice 2 : Corriger la syntaxe de l'exercice pour qu'il fonctionne (8 erreurs à trouver)&lt;/title&gt;<br/>    &lt;/head&gt;<br/>    &lt;body&gt;<br/>        &lt;script&gt;<br/>            <br/>            function afficher(txt, t){<br/>                document.write(txt);<br/>                for(var i = 0; i &lt; t.length; i++)<br/>                document.write(t[i] + ' ';<br/>                }<br/>                document.write(&lt;br/&gt;');<br/>                }<br/>            <br/>            function insert(newTab, nombre){<br/>                var i = 0;<br/>                while (newTab[i] &lt; nombre) i++;<br/>                for (var j = newTab.length - 1; j &gt;= i; j--) newTab[j+1] == newTab[j];<br/>                newTab[i] = nombre;<br/>            }<br/>            <br/>            var newTab = 0, 4, 6, 7, 9, 14, 17, 21];<br/>            afficher ('Le tableau est : ', newTab);<br/>            var nombre = (prompt('Entrez le nombre à insérer de façon à ce que les valeurs restent croissantes));<br/>            insert(newTab, nombre);<br/>            afficher('Après insertion : ', newTab)<br/>            <br/>        &lt;/script&gt;<br/>    &lt;/body&gt;<br/>&lt;/html&gt;",
+    "Algo sans erreur": "&lt;html lang='fr'&gt;<br/>&lt;head&gt;<br/>&lt;meta charset='UTF-8'&gt;<br/>&lt;title&gt;Exercice de syntaxe du JS&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;script&gt;<br/>function afficher(txt, t){<br/>document.write(txt);<br/>for(var i = 0; i &lt; t.length; i++){<br/>document.write(t[i] + ' ');<br/>}<br/>document.write('&lt;br/&gt;');<br/>}<br/>function insert(newTab, nombre){<br/>var i = 0;<br/>while (newTab[i] &lt; nombre) i++;<br/>for (var j = newTab.length - 1; j &gt;= i; j--) newTab[j+1] = newTab[j];<br/>newTab[i] = nombre;<br/>}<br/>var newTab = [0, 4, 6, 7, 9, 14, 17, 21];<br/>afficher ('Le tableau est : ', newTab);<br/>var nombre = parseInt(prompt('Entrez le nombre à insérer de façon à ce que les valeurs restent croissantes'));<br/>insert(newTab, nombre);<br/>afficher('Après insertion : ', newTab);<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;"
+  },
+  {
+    "NOM Prenom": "ROSEL Théo",
+    "Algo errone": "var userage = prompt('Entrer votre age');<br/>if ( userage &lt;= 0 && userage &gt; 150)<br/>alert('Age non valide');<br/>else<br/>alert(userage+ 'est valide');",
+    "Algo sans erreur": "var userage = prompt('Entrer votre age');<br/>if ( userage &lt;= 0 || userage &gt; 150)<br/>alert('Age non valide');<br/>else<br/>alert(userage+ 'est valide');"
+  },
+  {
+    "NOM Prenom": "BALOSSINI Arthur",
+    "Algo errone": "var x=prompt('Saisir x:');<br/>var y=prompt('Saisir y:');<br/>var z=prompt('Saisir z:');<br/>if ((x == y) ^ (y == z) ^ (x == z)) document.write('Vrai');<br/>else document.write('Faux');",
+    "Algo sans erreur": "var x=prompt('Saisir x:');<br/>var y=prompt('Saisir y:');<br/>var z=prompt('Saisir z:');<br/>if ((x == y) || (y == z) || (x == z)) document.write('Vrai');<br/>else document.write('Faux');"
+  },
+  {
+    "NOM Prenom": "DAVID Bérénice",
+    "Algo errone": "function parity () {<br/>    var number = parseInt(prompt('saisir un entier'));<br/>    if (number == 0) {<br/>        number = parseInt(prompt('Saisir un nouvel entier different de 0'));<br/>    } else {<br/>        if (number % 3 == 0) {<br/>            document.write(number + ' est pair');<br/>        } else {<br/>            document.write(number + ' est impair');<br/>        }<br/>    }<br/>}",
+    "Algo sans erreur": "function parity () {<br/>var number = parseInt(prompt('saisir un entier'));<br/>if (number == 0) {<br/>number = parseInt(prompt('Saisir un nouvel entier different de 0'));<br/>} else {<br/>if (number % 2 == 0) {<br/>document.write(number + ' est pair');<br/>} else {<br/>document.write(number + ' est impair');<br/>}<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "SIEESS Charlotte",
+    "Algo errone": "function pair () {<br/>    var userInput = parseInt(window.prompt(‘Veuillez saisir un nombre’));<br/>    if (userInput==0) {<br/>        document.write(‘Veuillez saisir un autre nombre différent de zéro’);<br/>    } else {<br/>        if (userInput%2=0) {<br/>            document.write(‘Le nombre est pair’);<br/>        } else {<br/>            document.write(‘Le nombre est impair’);<br/>        }<br/>    }<br/>}",
+    "Algo sans erreur": "function pair () {<br/>    var userInput = parseInt(window.prompt(‘Veuillez saisir un nombre’));<br/>    if (userInput==0) {<br/>        document.write(‘Veuillez saisir un autre nombre différent de zéro’);<br/>    } else {<br/>        if (userInput%2==0) {<br/>            document.write(‘Le nombre est pair’);<br/>        } else {<br/>            document.write(‘Le nombre est impair’);<br/>        }<br/>    }<br/>}"
+  },
+  {
+    "NOM Prenom": "L'HOMME Jérémy",
+    "Algo errone": "Concevoir un algorithme qui affiche les nombres de 1 à 30.<br/>    Les règles :<br/>            Affichez 'Multiple de 3' pour les nombres divisibles par 3.<br/>            Afficher 'Multiple de 5' pour les nombres divisibles par 5.<br/>            Afficher 'Multiple de 3 et 5' pour les nombres divisibles par 3 et 5.<br/>            Sinon, affichez simplement le nombre.<br/>Algorithme à corriger : <br/>for (var i = 1; i &lt;= 30; i++) {<br/>       if (i % 3 == 0) {<br/>         console.log('Multiple de 3');<br/>     } else if (i % 5 == 0) {<br/>         console.log('Multiple de 5');<br/>     } else if (i % 5 == 0 && i % 3 == 0) {<br/>         console.log('Multiple de 3 et 5');<br/>     } else {<br/>         console.log(i);<br/>     }<br/> }",
+    "Algo sans erreur": "for (var i = 1; i &lt;= 30; i++) {<br/>if (i % 3 == 0) {<br/>console.log('Multiple de 3');<br/>}<br/>else if (i % 5 == 0) {<br/>console.log('Multiple de 5');<br/>}<br/>else if (i % 15 == 0) {<br/>console.log('Multiple de 3 et 5');<br/>} else {<br/>console.log(i);<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "MARTIN Bérangère",
+    "Algo errone": "var x= Math.floor(Math.random())+1;<br/>document.write(x);",
+    "Algo sans erreur": "var x= Math.floor(Math.random()*10)+1;<br/>document.write(x);"
+  },
+  {
+    "NOM Prenom": "ROUSSEL Kaan",
+    "Algo errone": "var test = 'salut';<br/>console.log('il y a '+ test.lenght +' caractère(s)');",
+    "Algo sans erreur": "var test = 'salut';<br/>console.log('il y a '+ test.length +' caractère(s)');"
+  },
+  {
+    "NOM Prenom": "ROSSIGNOL Nicolas",
+    "Algo errone": "var nombre; <br/> nombre = prompt ('Saisissez X'); <br/> if (nombre % 2 == 0); <br/> { <br/> document.write('Le Chiffre est pair' + '&lt;br/&gt;'); <br/> } <br/> else <br/> { <br/> document.write('Le Chiffre est impair' + '&lt;br/&gt;') <br/> }",
+    "Algo sans erreur": "var nombre; <br/> nombre = prompt ('Saisissez X'); <br/> if (nombre % 2 == 0) <br/> { <br/> document.write('Le Chiffre est pair' + '&lt;br/&gt;'); <br/> } <br/> else <br/> { <br/> document.write('Le Chiffre est impair' + '&lt;br/&gt;') <br/> }"
+  },
+  {
+    "NOM Prenom": "N'GUYEN Johanna",
+    "Algo errone": "function compteurmots() {<br/>            var userInput = window.prompt('Veuillez saisir votre phrase'); <br/>            var mots = userInput.split(' ')<br/>            document.write('Votre phrase contient ' + mots.length + ' mots.'); <br/>        }",
+    "Algo sans erreur": "function compteurmots() {<br/>var userInput = window.prompt('Veuillez saisir votre phrase'); <br/>var mots = userInput.split(' '); <br/>document.write('Votre phrase contient ' + mots.length + ' mots.'); <br/>}"
+  },
+  {
+    "NOM Prenom": "DESOBRY Johann",
+    "Algo errone": "function damier_simple(n) {<br/>    for (var j = 0; i &lt; n; i++) { // pour chaque ligne<br/>        for (var j = 0; j &lt; n; j++) { // pour chaque position de la ligne<br/>            if ((i + j) % 2 == 0) document.write('@');<br/>            else document.write(' ');<br/>        }<br/>        document.write('&lt;br/&gt;'); // retour à la ligne<br/>    }<br/>    document.write('&lt;br/&gt;');<br/>}<br/>damier_simple(50);",
+    "Algo sans erreur": "function damier_simple(n) {<br/>for (var i = 0; i &lt; n; i++) { // pour chaque ligne<br/>for (var j = 0; j &lt; n; j++) { // pour chaque position de la ligne<br/>if ((i + j) % 2 == 0) document.write('@');<br/>else document.write(' ');}<br/>document.write('&lt;br/&gt;'); // retour à la ligne}<br/>document.write('&lt;br/&gt;');}<br/>damier_simple(50);<br/>// la réponse à corriger -&gt; for (var i = 0; i &lt; n; i++)"
+  },
+  {
+    "NOM Prenom": "RENARD Thibaut",
+    "Algo errone": "var damier = new Array (n);<br/>for (i = 0; i &lt; damier.length; i++) {<br/>    for  (i = 0; i &lt; damier.length; i++) {<br/>        if ( (i+j)%2 = 0) damier[i][j] = @;<br/>    }<br/>}",
+    "Algo sans erreur": "var damier = new Array (n);<br/>for (i = 0; i &lt; damier.length; i++) {<br/>for  (j = 0; j &lt; damier.length; j++) {<br/>if ( (i+j)%2 = 0) damier[i][j] = @;<br/>}<br/>}"
+  },
+  {
+    "NOM Prenom": "N'GUYEN Johanna",
+    "Algo errone": "function compteurmots() {<br/>            var userInput = window.prompt('Veuillez saisir votre phrase'); <br/>            var mots = userInput.split(' ')<br/>            document.write('Votre phrase contient ' + mots.length + ' mots.'); <br/>        }",
+    "Algo sans erreur": "function compteurmots() {<br/>            var userInput = window.prompt('Veuillez saisir votre phrase'); <br/>            var mots = userInput.split(' '); <br/>            document.write('Votre phrase contient ' + mots.length + ' mots.'); <br/>        }"
+  },
+  {
+    "NOM Prenom": "BAUMANN Anna",
+    "Algo errone": "var aFruits = new Array('pomme', 'orange', 'banane', 'peche', 'clementine');<br/>for (i = 1; i &lt;=aFruits.length; i++){<br/>console.log('un nouveau fruit :'+aFruits[i]);}",
+    "Algo sans erreur": "var aFruits = new Array('pomme', 'orange', 'banane', 'peche', 'clementine');<br/>for (i = 0; i &lt;aFruits.length; i++){<br/>console.log('un nouveau fruit :'+aFruits[i]);}"
+  },
+  {
+    "NOM Prenom": "N'GUYEN Johanna",
+    "Algo errone": "function compteurmots() {<br/>            var userInput = window.prompt('Veuillez saisir votre phrase'); <br/>            var mots = userInput.split(' ')<br/>            document.write('Votre phrase contient ' + mots.length + ' mots.'); <br/>        }",
+    "Algo sans erreur": "function compteurmots() {<br/>var userInput = window.prompt('Veuillez saisir votre phrase'); <br/>var mots = userInput.split(' '); <br/>document.write('Votre phrase contient ' + mots.length + ' mots.'); <br/>}"
+  },
+  {
+    "NOM Prenom": "CALMEJANE Lola",
+    "Algo errone": "&lt;script langage='javascript'&gt; <br/>function chaine(){ <br/>var compt=0; <br/>var ch=''; <br/>for (i=1;i&lt;=365;i++) <br/>{ <br/>ch = ch + i; <br/>} <br/>for(i=0;i&lt;=ch.length;i++)<br/>{ <br/>if<br/>(ch.charAt(i)=3)<br/>{ <br/>compt=compt+1; <br/>} <br/>} <br/>alert(compt); <br/>} <br/>&lt;/script&gt;",
+    "Algo sans erreur": "&lt;script langage='javascript'&gt; <br/>function chaine(){ <br/>var compt=0; <br/>var ch=''; <br/>for (i=1;i&lt;=365;i++) <br/>{ <br/>ch = ch + i; <br/>} <br/>for(i=0;i&lt;=ch.length;i++)<br/>{ <br/>if<br/>(ch.charAt(i)==3)<br/>{ <br/>compt=compt+1; <br/>} <br/>} <br/>alert(compt); <br/>} <br/>&lt;/script&gt;"
+  },
+  {
+    "NOM Prenom": "SALOBIR David",
+    "Algo errone": "function maFonction() {<br/>var x = prompt(‘Rentrer un nombre’);<br/>for (i=0 ; i&lt;5; i) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';",
+    "Algo sans erreur": "function maFonction() {<br/>var x = prompt(‘Rentrer un nombre’);<br/>for (i=0 ; i&lt;5; i++) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';"
+  },
+  {
+    "NOM Prenom": "BUSSON Kimberly",
+    "Algo errone": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr-FR'&gt;<br/>&lt;head&gt;<br/> &lt;meta charset='utf-8'&gt;<br/> &lt;title&gt;Exercice 3 &lt;/title&gt;<br/>&lt;/head&gt;<br/> &lt;body&gt;<br/>  &lt;script&gt;<br/>    /* Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N */<br/>     var N;<br/>    var i;<br/> var somme = 0;<br/>cdocument.write('Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N&lt;br/&gt;');<br/>    N = prompt('Entrez une valeur entière');<br/>    N = Number(N);<br/>   for (i = 1; i &lt; N; i = i + 1)<br/> {<br/> somme = somme + i; <br/>}<br/> document.write('la somme de tous les nombres compris entre 1 et '+N+' vaut '+somme+'&lt;br/&gt;')<br/>  &lt;/script&gt;<br/> &lt;/body&gt;<br/>&lt;/html&gt;<br/>",
+    "Algo sans erreur": "&lt;!DOCTYPE html&gt;<br/>&lt;html lang='fr-FR'&gt;<br/>&lt;head&gt;<br/> &lt;meta charset='utf-8'&gt;<br/> &lt;title&gt;Exercice 2 &lt;/title&gt;<br/>&lt;/head&gt;<br/> &lt;body&gt;<br/>  &lt;script&gt;<br/>    /* Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N */<br/>  var N;<br/>    var i;<br/>    var somme = 0;<br/>  document.write('Cet algorithme calcule et affiche la somme de tous les nombres compris entre 1 et N&lt;br/&gt;');<br/>    N = prompt('Entrez une valeur entière');<br/>    N = Number(N);<br/>    for (i = 1; i &lt;= N; i = i + 1){<br/>somme = somme + i;<br/>}<br/>document.write('la somme de tous les nombres compris entre 1 et '+N+' vaut '+somme+'&lt;br/&gt;');<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;"
+  },
+  {
+    "NOM Prenom": "PEMBA KINGALA Christine",
+    "Algo errone": "var nom, annee,sexe;<br/>  var nom = prompt (‘ Donnez votre nom ’ );<br/>var annee = prompt (‘ Donnez votre année de naissance :  ‘);<br/>var sexe = prompt (‘ Donnez votre sexe 0 : M ou 1 : F :  ‘);<br/>if (sexe == ‘0’){<br/>if (2016-annee&lt;16)<br/>document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es un garçon !’);<br/>else<br/>document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es un homme !’);<br/>else {<br/>if (2016-annee&lt;16)<br/>document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es une fille !’);<br/>else document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es une femme ! ’);<br/>}<br/>}<br/>",
+    "Algo sans erreur": "var nom, annee,sexe;<br/>  var nom = prompt (‘ Donnez votre nom ’ );<br/>var annee = prompt (‘ Donnez votre année de naissance :<br/>‘);<br/>var sexe = prompt (‘ Donnez votre sexe 0 : M ou 1 : F :  ‘);<br/>if (sexe == ‘0’){<br/>if (2016-annee&lt;16)<br/>document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es un garçon !’);<br/>else<br/>document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es un homme !’);<br/>}<br/>else {<br/>if (2016-annee&lt;16)<br/>document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es une fille !’);<br/>else document.write(‘ Bonjour ‘ + nom + ‘ tu as ‘ + (2016-annee) + ‘ ans et tu es une femme ! ’);<br/>}<br/>"
+  },
+  {
+    "NOM Prenom": "FISES Lisa",
+    "Algo errone": "function maFonction() {<br/>var x = prompt(‘Rentrer un nombre’);<br/>for (i==0 ; i&lt;5; i++) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';",
+    "Algo sans erreur": "function maFonction() {<br/>var x = prompt(‘Rentrer un nombre’);<br/>for (i=0 ; i&lt;5; i++) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';"
+  },
+  {
+    "NOM Prenom": "LEFEBVRE Gaëtan",
+    "Algo errone": "function maFonction() {<br/>var x = prompt(‘Rentrer un nombre’);<br/>if (i=0 ; i&lt;5; i++) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';",
+    "Algo sans erreur": "function maFonction() {<br/>var x = prompt(‘Rentrer un nombre’);<br/>for (i=0 ; i&lt;5; i++) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';"
+  },
+  {
+    "NOM Prenom": "ABRAHAM Emile",
+    "Algo errone": "var saisie=0;<br/>while(saisie&lt;0||saisie&gt;10){<br/>prompt(‘saisissez un nombre entre 1 et 10’);<br/>};",
+    "Algo sans erreur": "var saisie=0;<br/>do{<br/>prompt(‘saisissez un nombre entre 1 et 10’)while(saisie&lt;0||saisie&gt;10);<br/>};"
+  },
+  {
+    "NOM Prenom": "AMRHEIN Antoine",
+    "Algo errone": "var x=5;<br/>var y=10;<br/>switch(x&gt;y){<br/>case true:<br/>document.write(‘y est supérieur à x’);<br/>break;<br/>case false:<br/>document.write(‘y n’est pas supérieur à x.’);<br/>break;<br/>}",
+    "Algo sans erreur": "var x=5;<br/>var y=10;<br/>switch(x&gt;y){<br/>case true:<br/>document.write(‘x est supérieur à y’);<br/>break;<br/>case false:<br/>document.write(‘x n’est pas supérieur à y.’);<br/>break;<br/>}"
+  },
+  {
+    "NOM Prenom": "LAFARGUE Anthony",
+    "Algo errone": "function maFonction() {<br/>prompt(var x = ‘Rentrer un nombre’);<br/>for (i=0 ; i&lt;5; i++) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';",
+    "Algo sans erreur": "function maFonction() {<br/>var x = prompt(‘Rentrer un nombre’);<br/>for (i=0 ; i&lt;5; i++) {<br/>x = x + ‘Le nombre est ‘ + i + '&lt;br&gt;';"
+  },
+  {
+    "NOM Prenom": "JAMEN Eva",
+    "Algo errone": "if (nombre%2==0)(<br/>document.write{nombre+' est pair.'};<br/>) else (<br/>document.write{nombre+ ' est impair.'};<br/>)",
+    "Algo sans erreur": "if (nombre%2 ==0) {<br/>document.write(nombre + ' est pair.');<br/>} else {<br/>document.write(nombre + ' est impair.');<br/>}"
+  },
+  {
+    "NOM Prenom": "NAEEM Myriam",
+    "Algo errone": "for (var i = 10; i &gt;= 0; i++) {<br/>document.write(i);<br/>}",
+    "Algo sans erreur": "for (var i = 10; i &gt;= 0; i-) {<br/>document.write(i);<br/>}"
+  },
+  {
+    "NOM Prenom": "MAILLARD Gautier",
+    "Algo errone": "var c = parseInt(prompt('nombre ?'));<br/>var z = 0;<br/>for (i = 1; i &lt;= c; i++) {<br/>z = z + i;<br/>document.write(i + '+');<br/>}<br/>document.write('=' + z);<br/>}",
+    "Algo sans erreur": "var c = parseInt(prompt('nombre ?'));<br/>var z = 0;<br/>for (i = 1; i &lt;= c; i++) {<br/>z = z + i;<br/>document.write(i + '+');<br/>}<br/>document.write('=' + z);<br/>}"
+  },
+  {
+    "NOM Prenom": "BAULAND Evie",
+    "Algo errone": "var x =  parseInt(prompt('Veuillez saisir un entier x'));<br/>var y = parseInt(prompt('Veuillez saisir un entier y'));<br/>document.write(x + ' + ' + y + ' = ' + (x + y));<br/>document.write(x + ' - ' + y + ' = ' + (x - y));<br/>document.write(x + ' x ' + y + ' = ' + (x x y));<br/>document.write(x + ' / ' + y + ' = ' + (x / y));",
+    "Algo sans erreur": "var x =  parseInt(prompt('Veuillez saisir un entier x'));<br/>var y = parseInt(prompt('Veuillez saisir un entier y'));<br/>document.write(x + ' + ' + y + ' = ' + (x + y));<br/>document.write(x + ' - ' + y + ' = ' + (x - y));<br/>document.write(x + ' x ' + y + ' = ' + (x * y));<br/>document.write(x + ' / ' + y + ' = ' + (x / y));"
+  },
+  {
+    "NOM Prenom": "MARI Léna",
+    "Algo errone": "function parite(x) {<br/>if (x % 2) document.write (x + ' est pair &lt;br/&gt;');<br/>else document.write(x + 'est impair&lt;br/&gt;');<br/>} <br/>parite(prompt('saisir un entier'));",
+    "Algo sans erreur": "function parite(x) {<br/>if (x % 2 == 0) document.write (x + ' est pair &lt;br/&gt;');<br/>else document.write(x + 'est impair&lt;br/&gt;');<br/>} <br/>parite(prompt('saisir un entier'));"
+  },
+  {
+    "NOM Prenom": "ALONSO Guillaume",
+    "Algo errone": "<br/>var button = document.querySelector('.enter');<br/>var cpt = 0;<br/>var tab = [];<br/>var<br/>body = document.querySelector('body');<br/>button.onclick = function askDiv (){<br/>var msgDiv = prompt('Entrez votre message dans la div');<br/>var tab[cpt] = document.createElement('div');<br/>tab[cpt].innerHTML = msgDiv;<br/>body.appendChild(tab[cpt]);<br/>cpt++;<br/>}",
+    "Algo sans erreur": "<br/>// Pas besoin de créer l'element div en redéfinissant 'var tab[cpt]'<br/>var button = document.querySelector('.enter');<br/>var cpt = 0;<br/>var tab = [];<br/>var<br/>body = document.querySelector('body');<br/>button.onclick = function askDiv (){<br/>var msgDiv = prompt('Entrez votre message dans la div');<br/>tab[cpt] = document.createElement('div');<br/>tab[cpt].innerHTML = msgDiv;<br/>body.appendChild(tab[cpt]);<br/>cpt++;<br/>}"
+  },
+  {
+    "NOM Prenom": "GRANDIN Théo",
+    "Algo errone": "function Menu() {<br/>        var x;<br/>        do {<br/>          document.body.innerHTML = '';<br/>          document.write('a. Hello World !&lt;br/&gt;');<br/>          document.write('b. Nombre mystère&lt;br/&gt;');<br/>          document.write('c. Quit&lt;br/&gt;');<br/>          x = prompt('Choisissez entre a, b et c');<br/>          if (x == 'a') document.write('Hello World !');<br/>          else if (x == 'b') document.write(Math.round(Math.random() * 100));<br/>            else if (x != 'c') document.write(x + 'n\\'est pas un choix valide');<br/>          if (x != 'c') prompt('Continuer ?');<br/>        }(x != 'c');<br/>        document.write('Bye !&lt;br/&gt;');<br/>      }",
+    "Algo sans erreur": "function Menu() {<br/>var x;<br/>do {<br/>document.body.innerHTML = '';<br/>document.write('a. Hello World !&lt;br/&gt;');<br/>document.write('b. Nombre mystère&lt;br/&gt;');<br/>document.write('c. Quit&lt;br/&gt;');<br/>x = prompt('Choisissez entre a, b et c');<br/>if (x == 'a') document.write('Hello World !') ;<br/>else if (x == 'b') document.write(Math.round(Math.random() * 100));<br/>else if (x != 'c') document.write(x + 'n\\'est pas un choix valide');<br/>if (x != 'c') prompt('Continuer ?');<br/>} while (x != 'c');<br/>document.write('Bye !&lt;br/&gt;');<br/>}"
+  },
+  {
+    "NOM Prenom": "HABACHE Rayane",
+    "Algo errone": "<br/>function age_genre_nom (date, nom, genre) {<br/><br/>    nom = prompt('Comment vous appelez-vous ?');<br/>    date = prompt('En quelle année êtes-vous né ?');<br/>    genre = prompt('êtes-vous un homme(tapez 0) ou une femme(tapez 1)?');<br/>    age = 2015 - date;<br/>    <br/>    if ((genre == 0) && (age &lt; 16)) document.write('Bonjour' + nom + ' tu as ' + age + ' ans et tu es un garçon');<br/>    if ((genre == 0) && (age &gt; 16))document.write('Bonjour ' + nom + ' vous avez ' + age + ' ans et vous êtes un homme');<br/>    if ((genre == 1) && (age &lt; 16))documentwrite('Bonjour ' + nom + ' tu as ' + age + ' ans et tu es une fille');<br/>    if ((genre == 1) && (age &gt; 16)) document.write('Bonjour ' + nom + ' vous avez ' + age + ' ans et vous êtes une femme');<br/><br/>}",
+    "Algo sans erreur": "<br/>function age_genre_nom (date, nom, genre) {<br/><br/>    nom = prompt('Comment vous appelez-vous ?');<br/>    date = prompt('En quelle année êtes-vous né ?');<br/>    genre = prompt('êtes-vous un homme(tapez 0) ou une femme(tapez 1)?');<br/>    age = 2015 - date;<br/>    <br/>    if ((genre == 0) && (age &lt; 16)) document.write('Bonjour' + nom + ' tu as ' + age + ' ans et tu es un garçon');<br/>    if ((genre == 0) && (age &gt; 16))document.write('Bonjour ' + nom + ' vous avez ' + age + ' ans et vous êtes un homme');<br/>    if ((genre == 1) && (age &lt; 16))document.write('Bonjour ' + nom + ' tu as ' + age + ' ans et tu es une fille');<br/>    if ((genre == 1) && (age &gt; 16)) document.write('Bonjour ' + nom + ' vous avez ' + age + ' ans et vous êtes une femme');<br/><br/>}"
+  },
+  {
+    "NOM Prenom": "TA Hélène",
+    "Algo errone": "function exoDeux (){<br/>var y = Math.floor(Math.random()*100);<br/>var x = prompt('Trouver le chiffre mystère, vous avez 3 essais !’);<br/>var i = 0;<br/>for (i == 0; i &lt; 3; i++){<br/>if (i == 0 && x &lt; y){<br/>document.write(‘Raté c\\'est trop petit’);<br/>x = prompt('Veuillez entrer un nombre’);<br/>}<br/>else if (i == 0 && x &gt; y){<br/>x = prompt('Raté c\\'est trop grand’);<br/>}<br/>else if (i == 1 && x &lt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((y-x)/10))*10 + ' de différence’);<br/>}<br/>else if (i == 1 && x &gt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((x-y+1)/10)*10)) + ' de différence’);<br/>}<br/>else if (i == 2 && x &lt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a  ' + (y-x) + ' de différence’);<br/>}<br/>else if (i == 2 && x &gt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a ' + (x-y) + ' de différence’);<br/>}<br/>else if (x == y){<br/>document.write(‘Bravo ! Vous avez trouvé du' + i + 'ème coup’);<br/>}<br/>else if (x != y){<br/>document.write(‘Désolé ! vous avez perdu le chiffre était' + y );<br/>}<br/>}<br/>}<br/>exoDeux();",
+    "Algo sans erreur": "function exoDeux (){<br/>var y = Math.floor(Math.random()*100);<br/>var x = prompt('Trouver le chiffre mystère, vous avez 3 essais !’);<br/>var i = 0;<br/>for (i == 0; i &lt; 3; i++){<br/>if (i == 0 && x &lt; y){<br/>document.write(‘Raté c\\'est trop petit’);<br/>x = prompt('Veuillez entrer un nombre’);<br/>}<br/>else if (i == 0 && x &gt; y){<br/>x = prompt('Raté c\\'est trop grand’);<br/>}<br/>else if (i == 1 && x &lt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((y-x)/10))*10 + ' de différence’);<br/>}<br/>else if (i == 1 && x &gt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((x-y+1)/10)*10)) + ' de différence’);<br/>}<br/>else if (i == 2 && x &lt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a  ' + (y-x) + ' de différence’);<br/>}<br/>else if (i == 2 && x &gt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a ' + (x-y) + ' de différence’);<br/>}<br/>else if (x == y){<br/>document.write(‘Bravo ! Vous avez trouvé du' + i + 'ème coup’);<br/>break;<br/>}<br/>else if (x != y){<br/>document.write(‘Désolé ! vous avez perdu le chiffre était' + y );<br/>}<br/>}<br/>}<br/>exoDeux();"
+  },
+  {
+    "NOM Prenom": "TA Hélène",
+    "Algo errone": "function exoDeux (){<br/>var y = Math.floor(Math.random()*100);<br/>var x = prompt('Trouver le chiffre mystère, vous avez 3 essais !’);<br/>var i = 0;<br/>for (i == 0; i &lt; 3; i++){<br/>if (i == 0 && x &lt; y){<br/>document.write(‘Raté c\\'est trop petit’);<br/>x = prompt('Veuillez entrer un nombre’);<br/>}<br/>else if (i == 0 && x &gt; y){<br/>x = prompt('Raté c\\'est trop grand’);<br/>}<br/>else if (i == 1 && x &lt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((y-x)/10))*10 + ' de différence’);<br/>}<br/>else if (i == 1 && x &gt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((x-y+1)/10)*10)) + ' de différence’);<br/>}<br/>else if (i == 2 && x &lt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a  ' + (y-x) + ' de différence’);<br/>}<br/>else if (i == 2 && x &gt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a ' + (x-y) + ' de différence’);<br/>}<br/>else if (x == y){<br/>document.write(‘Bravo ! Vous avez trouvé du' + i + 'ème coup’);<br/>}<br/>else if (x != y){<br/>document.write(‘Désolé ! vous avez perdu le chiffre était' + y );<br/>}<br/>}<br/>}<br/>exoDeux();",
+    "Algo sans erreur": "function exoDeux (){<br/>var y = Math.floor(Math.random()*100);<br/>var x = prompt('Trouver le chiffre mystère, vous avez 3 essais !’);<br/>var i = 0;<br/>for (i == 0; i &lt; 3; i++){<br/>if (i == 0 && x &lt; y){<br/>document.write(‘Raté c\\'est trop petit’);<br/>x = prompt('Veuillez entrer un nombre’);<br/>}<br/>else if (i == 0 && x &gt; y){<br/>x = prompt('Raté c\\'est trop grand’);<br/>}<br/>else if (i == 1 && x &lt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((y-x)/10))*10 + ' de différence’);<br/>}<br/>else if (i == 1 && x &gt; y){<br/>x = prompt('Encore raté, aller un indice, il y a quasiment ' + (Math.floor((x-y+1)/10)*10)) + ' de différence’);<br/>}<br/>else if (i == 2 && x &lt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a  ' + (y-x) + ' de différence’);<br/>}<br/>else if (i == 2 && x &gt; y){<br/>x = prompt('Toujours faux ! Dernière chance, il y a ' + (x-y) + ' de différence’);<br/>}<br/>else if (x == y){<br/>document.write(‘Bravo ! Vous avez trouvé du' + i + 'ème coup’);<br/>break;<br/>}<br/>else if (x != y){<br/>document.write(‘Désolé ! vous avez perdu le chiffre était' + y );<br/>}<br/>}<br/>}<br/>exoDeux();"
+  },
+  {
+    "NOM Prenom": "VIGNERON-SEBASTIANIS Romain",
+    "Algo errone": "document.write'Hello World!';<br/>",
+    "Algo sans erreur": "document.write('Hello World!');"
+  },
+  {
+    "NOM Prenom": "HABIB Duke",
+    "Algo errone": "t : tableau 1D de tableau n // argument <br/> Var loc : i, j, deux compteurs de boucles / index du tableau <br/> début <br/> Pour i allant de 0 à n - 1 faire <br/> Tirer aléatoirement j entre i et n - 1 —&gt; j &lt;— i + (rand()mod(n-i)) <br/> tmp &lt;— t[j] <br/> t[i] &lt;— t[j] <br/> t[i] &lt;— tmp <br/> fin <br/> fin <br/>",
+    "Algo sans erreur": "t : tableau 1D de tableau n // argument <br/> Var loc : i, j, deux compteurs de boucles / index du tableau <br/> début <br/> Pour i allant de 0 à n - 1 faire <br/> Tirer aléatoirement j entre i et n - 1 —&gt; j &lt;— i + (rand()mod(n-i)) <br/> tmp &lt;— t[i] <br/> t[i] &lt;— t[j] <br/> t[j] &lt;— tmp <br/> fin <br/> fin <br/>"
+  }
+];
